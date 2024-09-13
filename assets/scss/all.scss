@@ -14,7 +14,6 @@
 // 旅宿細節 css
 @import "./layout/phone-header.scss";
 
-
 // 旅宿頁面
 @import "./pages/accommodation.scss";
 // 旅宿細節頁面
@@ -23,3 +22,11 @@
 @import "./pages/explore-detail.scss";
 // 首頁
 @import "./pages/index.scss";
+
+
+
+@import './pages/_search-page.scss';
+@import './pages/hotel-page';
+@import './pages/social-page';
+@import './pages/personal-page';
+@import './pages/mytrip';
