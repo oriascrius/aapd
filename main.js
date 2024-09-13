@@ -1,7 +1,7 @@
 // import Swiper bundle with all modules installed
-import Swiper from "swiper/bundle";
+// import Swiper from "swiper/bundle";
 // import styles bundle
-import "swiper/css/bundle";
+// import "swiper/css/bundle";
 
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -34,23 +34,23 @@ tablistItems.forEach((item) => {
 });
 
 // 旅宿 tab swiper
-const accommodation_swiper = new Swiper(".accommodation-swiper", {
-  slidesPerView: 3,
-  spaceBetween: 12,
-});
-// 探索頁、旅宿詳細共用 圖片 swiper
-const explore_detail_swiper = new Swiper(".explore_detail_swiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    type: "bullets", // 只顯示圓點分頁
-  },
-});
+// const accommodation_swiper = new Swiper(".accommodation-swiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 12,
+// });
+// 探索詳細頁、旅宿詳細共用 圖片 swiper
+// const explore_detail_swiper = new Swiper(".explore_detail_swiper", {
+//   slidesPerView: 1,
+//   spaceBetween: 10,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     type: "bullets", // 只顯示圓點分頁
+//   },
+// });
 
 // 旅宿詳細頁面 - 房型介紹 圖片 swiper
-const swiper_room_type_swiper = new Swiper(".swiper_room_type", {
-  slidesPerView: 3,
-  spaceBetween: 8,
-});
+// const swiper_room_type_swiper = new Swiper(".swiper_room_type", {
+//   slidesPerView: 3,
+//   spaceBetween: 8,
+// });

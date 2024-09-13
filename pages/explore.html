@@ -236,17 +236,17 @@
                 <!-- swiper 方式 -->
                 <nav class="accommodation-swiper overflow-hidden">
                     <ul class="swiper-wrapper d-flex list-unstyled feature-tab-list m-0 py-6 px-5">
-                        <li class="swiper-slide w-auto"><a href="#"><img
-                                    src="../assets/images/icon/explore-food.png" alt="美食"></a>
+                        <li class="swiper-slide w-auto"><a href="#"><img src="../assets/images/icon/explore-food.png"
+                                    alt="美食"></a>
                         </li>
-                        <li class="swiper-slide w-auto"><a href="#"><img
-                                    src="../assets/images/icon/explore-outside.png" alt="戶外"></a>
+                        <li class="swiper-slide w-auto"><a href="#"><img src="../assets/images/icon/explore-outside.png"
+                                    alt="戶外"></a>
                         </li>
                         <li class="swiper-slide w-auto"><a href="#"><img
                                     src="../assets/images/icon/explore-handmade.png" alt="手做"></a>
                         </li>
-                        <li class="swiper-slide w-auto"><a href="#"><img
-                                    src="../assets/images/icon/explore-store.png" alt="特色小店"></a>
+                        <li class="swiper-slide w-auto"><a href="#"><img src="../assets/images/icon/explore-store.png"
+                                    alt="特色小店"></a>
                         </li>
                     </ul>
                 </nav>
@@ -491,6 +491,13 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
         <script type="module" src="../main.js"></script>
+        <!-- 旅宿、探索共用 tab swiper -->
+        <script>
+            const accommodation_swiper = new Swiper(".accommodation-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 12,
+            });
+        </script>
 
 </body>
 
