@@ -1,0 +1,64 @@
+// 入住、退房時間、人數
+.accommodation-detail-content {
+  border: 2px solid #b0a994;
+  border-radius: 16px;
+  .check-in-out {
+    padding: 8.75px 2px;
+  }
+  .check-in-out-line {
+    border: 2.5px solid #998f76;
+    width: 36px;
+  }
+}
+// 關於旅宿
+.accommodation-detail-trip {
+  padding-bottom: 28px;
+  border-bottom: 1px solid #d9d9d9;
+}
+// 房型介紹
+.room-type {
+  border-bottom: 1px solid #D9D9D9;
+  img {
+    border: 2px solid #8a7f68;
+    border-radius: 12px;
+    margin-bottom: 6px;
+  }
+}
+// 旅宿設施及服務
+.accommodation-facilities-services {
+  ul {
+    border-bottom: 1px solid #d9d9d9;
+  }
+  h3 {
+    color: #585858;
+  }
+  border-bottom: 1px solid #d9d9d9;
+}
+// 交通資訊
+.traffic-information {
+  ul {
+    border-bottom: 1px solid #d9d9d9;
+  }
+  h4 {
+    border-left: 3px solid #457bad;
+  }
+}
+// 住宿規定
+.accommodation-rules {
+  ul {
+    border-bottom: 1px solid #d9d9d9;
+  }
+  h3 {
+    color: #585858;
+  }
+}
+// 評論
+.comment-content {
+  h4,
+  time {
+    color: #585858;
+  }
+  p {
+    color: #333333;
+  }
+}

@@ -1,0 +1,25 @@
+
+// 引入 bootstrap icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+// 引入 google字體  Noto Sans TC
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./utils/variables";
+@import "../../node_modules/bootstrap";
+
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+// 旅宿細節 css
+@import "./layout/phone-header.scss";
+
+
+// 旅宿頁面
+@import "./pages/accommodation.scss";
+// 旅宿細節頁面
+@import "./pages/accommodation-detail.scss";
+// 探索細節頁面
+@import "./pages/explore-detail.scss";
+// 首頁
+@import "./pages/index.scss";

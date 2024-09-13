@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌟𝓐-𝓐-𝓟-𝓓🌠- 旅宿</title>
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Bootstrap Datepicker -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 引入 jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- 引入 jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body class="accommodation-background mx-auto" style="width: 375px;">
+
+    <%- include('./layout/phone-header'); -%>
+        <main>
+            <section>
+                <div class="py-3 px-5 sticky-header-sec">
+                    <div class="d-flex align-items-center">
+                        <!-- 向左 icon -->
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <path d="M10 6.5L4 12.5M4 12.5C6.34315 14.8431 7.65685 16.1569 10 18.5M4 12.5H19"
+                                    stroke="#766a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <h3 class="fw-medium fs-5 mb-0 mt-2 text-primary-600">旅 宿</h3>
+                        <!-- 鈴鐺 icon -->
+                        <a href="#" class="ms-auto">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 8.5C18 6.9087 17.3679 5.38258 16.2426 4.25736C15.1174 3.13214 13.5913 2.5 12 2.5C10.4087 2.5 8.88258 3.13214 7.75736 4.25736C6.63214 5.38258 6 6.9087 6 8.5C6 15.5 3 17.5 3 17.5H21C21 17.5 18 15.5 18 8.5Z"
+                                    stroke="#766a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M13.73 20.5C13.5542 20.8031 13.3019 21.0547 12.9982 21.2295C12.6946 21.4044 12.3504 21.4965 12 21.4965C11.6496 21.4965 11.3054 21.4044 11.0018 21.2295C10.6982 21.0547 10.4458 20.8031 10.27 20.5"
+                                    stroke="#766a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- 搜尋框 -->
+                <div class="accommodation-input-group py-5 px-5">
+                    <div class="d-flex align-items-center pt-2 ps-3 w-100">
+                        <a href="#" class="input-group-text p-0 me-4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-primary-400">
+                                <circle cx="11" cy="11.5" r="7" stroke="#998F76" stroke-width="2" />
+                                <path d="M20 20.5L17 17.5" stroke="#998F76" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <input type="text" class="form-control p-0" id="search" aria-label="搜尋"
+                            placeholder="搜尋心目中的京都旅宿">
+                    </div>
+                </div>
+                <!-- 日期、一人獨旅 -->
+                <ul class="d-flex list-unstyled tab-list gap-4 m-0 py-3 px-5">
+                    <!-- 日期 -->
+                    <li class="tab-list-btn">
+                        <a href="#" class="d-flex align-items-center justify-content-center datepicker-toggle"
+                            data-toggle="collapse" data-target="#datepickerCollapse" aria-expanded="false"
+                            aria-controls="datepickerCollapse">
+                            <!-- 這邊使用兩個 svg 分別設定 default 和 hover 的 icon -->
+                            <!-- 有試圖單獨設定 svg 的顏色但會有太多選項 -->
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" class="me-3 pb-1 default-icon"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="6.5" width="18" height="15" rx="2" stroke="#8A7F68" stroke-width="2" />
+                                <path d="M4 11.5H20" stroke="#8A7F68" stroke-width="2" stroke-linecap="round" />
+                                <path d="M9 16.5H15" stroke="#8A7F68" stroke-width="2" stroke-linecap="round" />
+                                <path d="M8 3.5L8 7.5" stroke="#8A7F68" stroke-width="2" stroke-linecap="round" />
+                                <path d="M16 3.5L16 7.5" stroke="#8A7F68" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" class="me-3 pb-1 hover-icon"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3.16699" y="6" width="18" height="15" rx="2" stroke="#F5F4F1"
+                                    stroke-width="1.5" />
+                                <path d="M4.16699 11H20.167" stroke="#F5F4F1" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <path d="M9.16699 16H15.167" stroke="#F5F4F1" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <path d="M8.16699 3L8.16699 7" stroke="#F5F4F1" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <path d="M16.167 3L16.167 7" stroke="#F5F4F1" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            日期
+                        </a>
+                    </li>
+                    <!-- 1人獨旅 -->
+                    <li class="tab-list-btn">
+                        <a href="#" class="d-flex align-items-center justify-content-center" type="button"
+                            data-toggle="collapse" data-target="#collapseTraveling" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" class="me-3 default-icon"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.02051" cy="7.5" r="3.1" stroke="#8A7F68" stroke-width="1.8"
+                                    stroke-linecap="round" />
+                                <path
+                                    d="M16.2019 7.45C16.4803 6.96766 16.939 6.61571 17.477 6.47156C18.015 6.32741 18.5882 6.40287 19.0705 6.68135C19.5528 6.95982 19.9048 7.4185 20.049 7.95648C20.1931 8.49446 20.1176 9.06766 19.8392 9.55C19.5607 10.0323 19.102 10.3843 18.564 10.5284C18.0261 10.6726 17.4528 10.5971 16.9705 10.3187C16.4882 10.0402 16.1362 9.5815 15.9921 9.04352C15.8479 8.50554 15.9234 7.93234 16.2019 7.45L16.2019 7.45Z"
+                                    stroke="#8A7F68" stroke-width="1.8" />
+                                <path
+                                    d="M15.82 19.5823L16.7108 19.454V19.454L15.82 19.5823ZM2.01014 19.5823L1.11933 19.454L2.01014 19.5823ZM8.91505 13.9463C11.2827 13.9463 12.67 14.9081 13.5296 16.0597C14.4229 17.2565 14.7865 18.7199 14.9291 19.7106L16.7108 19.454C16.5489 18.3304 16.1235 16.5257 14.9721 14.9831C13.7871 13.3953 11.8742 12.1463 8.91505 12.1463V13.9463ZM14.9291 19.7106C14.9303 19.7189 14.9301 19.7239 14.9299 19.7261C14.9298 19.7283 14.9294 19.7296 14.9292 19.7303C14.9288 19.7314 14.9271 19.7362 14.9202 19.7435C14.9058 19.7588 14.8694 19.7833 14.807 19.7833V21.5833C15.8913 21.5833 16.8866 20.6753 16.7108 19.454L14.9291 19.7106ZM14.807 19.7833H3.02305V21.5833H14.807V19.7833ZM3.02305 19.7833C2.96064 19.7833 2.9243 19.7588 2.90989 19.7435C2.903 19.7362 2.90128 19.7314 2.90092 19.7303C2.90068 19.7296 2.90034 19.7283 2.90015 19.7261C2.89996 19.7239 2.89975 19.7189 2.90095 19.7106L1.11933 19.454C0.943446 20.6753 1.93883 21.5833 3.02305 21.5833V19.7833ZM2.90095 19.7106C3.04363 18.7199 3.40723 17.2565 4.30049 16.0597C5.16006 14.9081 6.54739 13.9463 8.91505 13.9463V12.1463C5.95589 12.1463 4.04303 13.3953 2.85797 14.9831C1.7066 16.5257 1.28115 18.3304 1.11933 19.454L2.90095 19.7106Z"
+                                    fill="#8A7F68" />
+                                <path
+                                    d="M15.8806 19.8642L14.9899 19.9937L15.102 20.7642H15.8806V19.8642ZM22.9935 18.6599L22.1174 18.8659L22.9935 18.6599ZM14.4761 15.6132L13.7239 15.1189L13.4149 15.5892L13.7024 16.073L14.4761 15.6132ZM21.9851 18.9642H15.8806V20.7642H21.9851V18.9642ZM22.1174 18.8659C22.1219 18.8851 22.1198 18.8935 22.1192 18.8959C22.1182 18.8999 22.1154 18.9073 22.1071 18.9171C22.09 18.9371 22.051 18.9642 21.9851 18.9642V20.7642C23.1493 20.7642 24.1686 19.7253 23.8696 18.4539L22.1174 18.8659ZM18.1145 14.4C19.3571 14.4 20.223 15.0192 20.8678 15.9142C21.5307 16.8342 21.9119 17.992 22.1174 18.8659L23.8696 18.4539C23.6413 17.4828 23.1919 16.0606 22.3282 14.8619C21.4465 13.6382 20.0898 12.6 18.1145 12.6V14.4ZM15.2282 16.1075C15.8863 15.106 16.7901 14.4 18.1145 14.4V12.6C15.9962 12.6 14.5966 13.7911 13.7239 15.1189L15.2282 16.1075ZM13.7024 16.073C14.4666 17.3591 14.8257 18.8647 14.9899 19.9937L16.7712 19.7346C16.5909 18.4954 16.1849 16.7271 15.2498 15.1534L13.7024 16.073Z"
+                                    fill="#8A7F68" />
+                            </svg>
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" class="me-3 hover-icon"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.35352" cy="7" r="3.1" stroke="#F5F4F1" stroke-width="1.8"
+                                    stroke-linecap="round" />
+                                <path
+                                    d="M16.5349 6.95C16.8133 6.46766 17.272 6.11571 17.81 5.97156C18.348 5.82741 18.9212 5.90287 19.4035 6.18135C19.8859 6.45982 20.2378 6.9185 20.382 7.45648C20.5261 7.99446 20.4506 8.56766 20.1722 9.05C19.8937 9.53234 19.435 9.88429 18.897 10.0284C18.3591 10.1726 17.7859 10.0971 17.3035 9.81865C16.8212 9.54018 16.4692 9.0815 16.3251 8.54352C16.1809 8.00554 16.2564 7.43234 16.5349 6.95L16.5349 6.95Z"
+                                    stroke="#F5F4F1" stroke-width="1.8" />
+                                <path
+                                    d="M16.153 19.0823L15.2622 19.2106L16.153 19.0823ZM15.14 19.2833H3.35606V21.0833H15.14V19.2833ZM3.23396 19.2106C3.37664 18.2199 3.74024 16.7565 4.63349 15.5597C5.49307 14.4081 6.8804 13.4463 9.24805 13.4463V11.6463C6.2889 11.6463 4.37604 12.8953 3.19098 14.4831C2.03961 16.0257 1.61416 17.8304 1.45234 18.954L3.23396 19.2106ZM9.24805 13.4463C11.6157 13.4463 13.003 14.4081 13.8626 15.5597C14.7559 16.7565 15.1195 18.2199 15.2622 19.2106L17.0438 18.954C16.882 17.8304 16.4565 16.0257 15.3051 14.4831C14.1201 12.8953 12.2072 11.6463 9.24805 11.6463V13.4463ZM3.35606 19.2833C3.29365 19.2833 3.25731 19.2588 3.2429 19.2435C3.23601 19.2362 3.23429 19.2314 3.23393 19.2303C3.23369 19.2296 3.23335 19.2283 3.23315 19.2261C3.23296 19.2239 3.23276 19.2189 3.23396 19.2106L1.45234 18.954C1.27645 20.1753 2.27183 21.0833 3.35606 21.0833V19.2833ZM15.14 21.0833C16.2243 21.0833 17.2197 20.1753 17.0438 18.954L15.2622 19.2106C15.2634 19.2189 15.2631 19.2239 15.263 19.2261C15.2628 19.2283 15.2624 19.2296 15.2622 19.2303C15.2618 19.2314 15.2601 19.2362 15.2532 19.2435C15.2388 19.2588 15.2025 19.2833 15.14 19.2833V21.0833Z"
+                                    fill="#F5F4F1" />
+                                <path
+                                    d="M16.2141 19.3642L15.3234 19.4937L15.4355 20.2642H16.2141V19.3642ZM23.327 18.1599L22.4509 18.3659L22.4509 18.3659L23.327 18.1599ZM14.8096 15.1132L14.0574 14.6189L13.7484 15.0892L14.0359 15.573L14.8096 15.1132ZM22.3186 18.4642H16.2141V20.2642H22.3186V18.4642ZM22.4509 18.3659C22.4554 18.3851 22.4533 18.3935 22.4527 18.3959C22.4517 18.3999 22.4489 18.4073 22.4406 18.4171C22.4235 18.4371 22.3844 18.4642 22.3186 18.4642V20.2642C23.4828 20.2642 24.5021 19.2253 24.2031 17.9539L22.4509 18.3659ZM18.448 13.9C19.6906 13.9 20.5565 14.5192 21.2013 15.4142C21.8642 16.3342 22.2454 17.492 22.4509 18.3659L24.2031 17.9539C23.9748 16.9828 23.5254 15.5606 22.6617 14.3619C21.78 13.1382 20.4233 12.1 18.448 12.1V13.9ZM15.5617 15.6075C16.2198 14.606 17.1236 13.9 18.448 13.9V12.1C16.3297 12.1 14.9301 13.2911 14.0574 14.6189L15.5617 15.6075ZM14.0359 15.573C14.8001 16.8591 15.1592 18.3647 15.3234 19.4937L17.1047 19.2346C16.9244 17.9954 16.5184 16.2271 15.5833 14.6534L14.0359 15.573Z"
+                                    fill="#F5F4F1" />
+                            </svg>1人獨旅
+                        </a>
+                    </li>
+                    <!-- 2K-4K -->
+                    <li class="tab-list-btn">
+                        <a href="#" class="d-flex align-items-center justify-content-center" type="button"
+                            data-toggle="collapse" data-target="#collapseMoney" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" class="me-2 default-icon"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4.5L12 20.5" stroke="#8A7F68" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M16.1667 6.5H9.91667C9.14312 6.5 8.40125 6.81607 7.85427 7.37868C7.30729 7.94129 7 8.70435 7 9.5C7 10.2956 7.30729 11.0587 7.85427 11.6213C8.40125 12.1839 9.14312 12.5 9.91667 12.5H14.0833C14.8569 12.5 15.5987 12.8161 16.1457 13.3787C16.6927 13.9413 17 14.7044 17 15.5C17 16.2956 16.6927 17.0587 16.1457 17.6213C15.5987 18.1839 14.8569 18.5 14.0833 18.5H7"
+                                    stroke="#8A7F68" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" class="me-2 hover-icon"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.832 4L12.832 20" stroke="#F5F4F1" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M16.9987 6H10.7487C9.97515 6 9.23328 6.31607 8.6863 6.87868C8.13932 7.44129 7.83203 8.20435 7.83203 9C7.83203 9.79565 8.13932 10.5587 8.6863 11.1213C9.23328 11.6839 9.97515 12 10.7487 12H14.9154C15.6889 12 16.4308 12.3161 16.9778 12.8787C17.5247 13.4413 17.832 14.2044 17.832 15C17.832 15.7956 17.5247 16.5587 16.9778 17.1213C16.4308 17.6839 15.6889 18 14.9154 18H7.83203"
+                                    stroke="#F5F4F1" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>2K-4K
+
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- id="accordionExample" 放外層，data-parent="#accordionExample"放各自控制的子層，一次就只能開一個子層 -->
+                <!-- horizontal-collapse css 控制呈現效果方向 -->
+                <div id="accordionExample">
+                    <!-- 日曆 -->
+                    <div class="collapse horizontal-collapse" id="datepickerCollapse" data-parent="#accordionExample">
+
+                        <div class="card datepicker-card-body">
+                            <div id="datepicker"></div>
+                            <div class="bg-secondary-400 datepicker-footer">
+                                <a href="#" class="text-white fw-medium fs-5">搜尋</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 一人獨旅 向下推出得空間 -->
+                    <div class="collapse horizontal-collapse" id="collapseTraveling" data-parent="#accordionExample">
+                        <div class="cardTraveling mb-5">
+                            <ul class="list-unstyled m-0 text-center">
+                                <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn ">1 人獨旅</li>
+                                <li
+                                    class="fw-medium qoq-fs-14 mb-4 tab-index-btn d-flex align-items-center justify-content-center">
+                                    2 <span class="mx-2"></span> 4
+                                </li>
+                                <li
+                                    class="fw-medium qoq-fs-14 mb-4 tab-index-btn d-flex align-items-center justify-content-center">
+                                    6 <span class="mx-2"></span> 8
+                                </li>
+                                <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn">10 人團旅</li>
+                                <li class="bg-secondary-400"><a href="#" class="text-white fw-medium fs-5">搜尋</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 2K-4K 向下推出得空間 -->
+                    <div class="collapse horizontal-collapse" id="collapseMoney" data-parent="#accordionExample">
+                        <div class="cardTraveling mb-5">
+                            <ul class="list-unstyled m-0 text-center">
+                                <li
+                                    class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center">
+                                    $ 2 K <span class="mx-2"></span> $ 4 K
+                                </li>
+                                <li
+                                    class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center">
+                                    $ 5 K <span class="mx-2"></span> $ 1 W
+                                </li>
+                                <li
+                                    class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center">
+                                    $ 2 W <span class="mx-2"></span> $ 4 W
+                                </li>
+                                <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn">自定義</li>
+                                <li class="bg-secondary-400"><a href="#" class="text-white fw-medium fs-5">搜尋</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 獨家折扣、熱門住宿、日式町屋、溫泉旅館 -->
+                <!-- 設計稿 gap-4(12px)，但會超出版面有 X 軸，是否改成 swiper -->
+                <!-- <nav>
+                    <ul class="d-flex list-unstyled feature-tab-list m-0 py-6 gap-2 px-5">
+                        <li><a href="#"><img src="../assets/images/feature-tab-icon/discount-icon.png" alt="獨家折扣"></a>
+                        </li>
+                        <li><a href="#"><img src="../assets/images/feature-tab-icon/popular-accommodation.png"
+                                    alt="熱門住宿"></a>
+                        </li>
+                        <li><a href="#"><img src="../assets/images/feature-tab-icon/machiya.png" alt="日式町屋"></a>
+                        </li>
+                        <li><a href="#"><img src="../assets/images/feature-tab-icon/spring-hotel.png" alt="溫泉旅館"></a>
+                        </li>
+                    </ul>
+                </nav> -->
+                <!-- swiper 方式 -->
+                <nav class="accommodation-swiper overflow-hidden">
+                    <ul class="swiper-wrapper d-flex list-unstyled feature-tab-list m-0 py-6 px-5">
+                        <li class="swiper-slide w-auto"><a href="#"><img
+                                    src="../assets/images/feature-tab-icon/discount-icon.png" alt="獨家折扣"></a>
+                        </li>
+                        <li class="swiper-slide w-auto"><a href="#"><img
+                                    src="../assets/images/feature-tab-icon/popular-accommodation.png" alt="熱門住宿"></a>
+                        </li>
+                        <li class="swiper-slide w-auto"><a href="#"><img
+                                    src="../assets/images/feature-tab-icon/machiya.png" alt="日式町屋"></a>
+                        </li>
+                        <li class="swiper-slide w-auto"><a href="#"><img
+                                    src="../assets/images/feature-tab-icon/spring-hotel.png" alt="溫泉旅館"></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 為您推薦 -->
+                <div class="d-flex align-items-center justify-content-between ps-6 py-3 mb-5 sticky-header-map">
+                    <div>
+                        <h2 class="text-primary-700 fw-bold fs-3 m-0 pb-1">為您推薦</h2>
+                        <span class="text-primary-400 fw-normal qoq-fs-14">82項搜尋結果</span>
+                    </div>
+                    <div class="map-icon-wrapper p-2 bg-primary-200">
+                        <a href="#" class="image-container">
+                            <img src="../assets/images/icon/map-icon_list.png" alt="地圖" class="map-icon default"
+                                style="width: 44px; height: 44px;">
+                            <img src="../assets/images/icon/map-icon_list_hover.png" alt="地圖" class="map-icon hover"
+                                style="width: 44px; height: 44px;">
+                        </a>
+                    </div>
+                </div>
+                <!-- 住宿列表 -->
+                <ul class="list-unstyled m-0 px-5">
+                    <li class="px-3 pt-1 pb-1 mb-5 accommodation-list">
+                        <a href="#" class="accommodation-list-img d-block mb-3">
+                            <img src="../assets/images/pic/kyoto11.png" alt="kyoto11" class="w-100">
+                            <div class="bg-primary-500 py-2 px-5 position-absolute qoq-fs-12 fw-normal">特別優惠</div>
+                            <svg width="24" height="24" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="position-absolute">
+                                <path
+                                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
+                                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="d-flex justify-content-between align-items-center text-primary-400">
+                            <h3 class="fw-bold text-gray-600 fs-3 mb-2">吉村屋町家 四条大宮</h3>
+                            <div class="d-flex align-items-center mb-2">
+                                <svg width="20" height="20" viewBox="0 0 24 25" fill="none" class="pe-1"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
+                                        fill="#998F76" />
+                                </svg>
+                                <span class="fw-medium fs-5 pe-2">4.7</span>
+                                <span class="fw-normal qoq-fs-12">(101)</span>
+                            </div>
+                        </div>
+                        <div class="fw-medium text-primary-500 fs-4">TWD 2,300起</div>
+                        <div class="d-flex align-items-center">
+                            <svg width="16" height="16" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <path
+                                    d="M20.1818 10.5909C20.1818 17.2727 11.5909 23 11.5909 23C11.5909 23 3 17.2727 3 10.5909C3 8.31246 3.90511 6.12733 5.51622 4.51622C7.12733 2.90511 9.31246 2 11.5909 2C13.8694 2 16.0545 2.90511 17.6656 4.51622C19.2767 6.12733 20.1818 8.31246 20.1818 10.5909Z"
+                                    stroke="#969696" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M11.5907 12.9773C13.1722 12.9773 14.4543 11.6952 14.4543 10.1136C14.4543 8.53209 13.1722 7.25 11.5907 7.25C10.0091 7.25 8.72705 8.53209 8.72705 10.1136C8.72705 11.6952 10.0091 12.9773 11.5907 12.9773Z"
+                                    stroke="#969696" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="text-gray-500 fw-medium qoq-fs-14">下京區</span>
+                        </div>
+                    </li>
+                    <li class="px-3 pt-1 pb-1 mb-5 accommodation-list">
+                        <a href="#" class="accommodation-list-img d-block mb-3">
+                            <img src="../assets/images/pic/kyoto11.png" alt="kyoto11" class="w-100">
+                            <div class="bg-primary-500 py-2 px-5 position-absolute qoq-fs-12 fw-normal">獨家住宿</div>
+                            <svg width="24" height="24" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="position-absolute">
+                                <path
+                                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
+                                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                        <div class="d-flex justify-content-between align-items-center text-primary-400">
+                            <h3 class="fw-bold text-gray-600 fs-3 mb-2">京北芹生町 農家住宿</h3>
+                            <div class="d-flex align-items-center mb-2">
+                                <svg width="20" height="20" viewBox="0 0 24 25" fill="none" class="pe-1"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
+                                        fill="#998F76" />
+                                </svg>
+                                <span class="fw-medium fs-5 pe-2">4.5</span>
+                                <span class="fw-normal qoq-fs-12">(32)</span>
+                            </div>
+                        </div>
+                        <div class="fw-medium text-primary-500 fs-4">TWD 1,400起</div>
+                        <div class="d-flex align-items-center">
+                            <svg width="16" height="16" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <path
+                                    d="M20.1818 10.5909C20.1818 17.2727 11.5909 23 11.5909 23C11.5909 23 3 17.2727 3 10.5909C3 8.31246 3.90511 6.12733 5.51622 4.51622C7.12733 2.90511 9.31246 2 11.5909 2C13.8694 2 16.0545 2.90511 17.6656 4.51622C19.2767 6.12733 20.1818 8.31246 20.1818 10.5909Z"
+                                    stroke="#969696" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M11.5907 12.9773C13.1722 12.9773 14.4543 11.6952 14.4543 10.1136C14.4543 8.53209 13.1722 7.25 11.5907 7.25C10.0091 7.25 8.72705 8.53209 8.72705 10.1136C8.72705 11.6952 10.0091 12.9773 11.5907 12.9773Z"
+                                    stroke="#969696" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="text-gray-500 fw-medium qoq-fs-14">京北區</span>
+                        </div>
+
+                    </li>
+                    <li class="px-3 pt-1pb-1 mb-5 accommodation-list">
+                        <a href="#" class="accommodation-list-img d-block mb-3">
+                            <img src="../assets/images/pic/kyoto11.png" alt="kyoto11" class="w-100">
+                            <div class="bg-primary-500 py-2 px-5 position-absolute qoq-fs-12 fw-normal">限時優惠</div>
+                            <svg width="24" height="24" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="position-absolute">
+                                <path
+                                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
+                                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                        <div class="d-flex justify-content-between align-items-center text-primary-400">
+                            <h3 class="fw-bold text-gray-600 fs-3 mb-2 text-truncate" style="width: 219px;">
+                                一人成行-海之京都一日遊｜美山町、天橋立</h3>
+                            <div class="d-flex align-items-center mb-2">
+                                <svg width="20" height="20" viewBox="0 0 24 25" fill="none" class="pe-1"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
+                                        fill="#998F76" />
+                                </svg>
+                                <span class="fw-medium fs-5 pe-2">4.6</span>
+                                <span class="fw-normal qoq-fs-12">(112)</span>
+                            </div>
+                        </div>
+                        <div class="fw-medium text-primary-500 fs-4">TWD 1,990起</div>
+                        <div class="d-flex align-items-center">
+                            <svg width="16" height="16" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <path
+                                    d="M20.1818 10.5909C20.1818 17.2727 11.5909 23 11.5909 23C11.5909 23 3 17.2727 3 10.5909C3 8.31246 3.90511 6.12733 5.51622 4.51622C7.12733 2.90511 9.31246 2 11.5909 2C13.8694 2 16.0545 2.90511 17.6656 4.51622C19.2767 6.12733 20.1818 8.31246 20.1818 10.5909Z"
+                                    stroke="#969696" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M11.5907 12.9773C13.1722 12.9773 14.4543 11.6952 14.4543 10.1136C14.4543 8.53209 13.1722 7.25 11.5907 7.25C10.0091 7.25 8.72705 8.53209 8.72705 10.1136C8.72705 11.6952 10.0091 12.9773 11.5907 12.9773Z"
+                                    stroke="#969696" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="text-gray-500 fw-medium qoq-fs-14">下京區</span>
+                        </div>
+
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div class="accommodation-footer-wrapper d-flex justify-content-center">
+                <svg width="134" height="5" viewBox="0 0 134 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="134" height="5" rx="2.5" fill="black" />
+                </svg>
+            </div>
+        </footer>
+
+
+        <script>
+            //  JS 判斷 header 是否滾動，添加 自定義 css scrolled 增增加背景顏色
+            document.addEventListener("DOMContentLoaded", function () {
+                const header = document.querySelector(".sticky-header");
+
+                if (!header) {
+                    console.error("未找到 .sticky-header 元素");
+                    return;
+                }
+
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > 0) {
+                        header.classList.add("scrolled");
+                    } else {
+                        header.classList.remove("scrolled");
+                    }
+                });
+            });
+        </script>
+        <script>
+            // 回上一頁
+            document.addEventListener("DOMContentLoaded", function () {
+                const header = document.querySelector(".sticky-header-sec");
+
+                if (!header) {
+                    console.error("未找到 .sticky-header-sec 元素");
+                    return;
+                }
+
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > 0) {
+                        header.classList.add("scrolled");
+                    } else {
+                        header.classList.remove("scrolled");
+                    }
+                });
+            });
+        </script>
+        <script>
+            // 地圖
+            document.addEventListener("DOMContentLoaded", function () {
+                const header = document.querySelector(".sticky-header-map");
+                const scrollThreshold = 200; // 設置滾動觸發的閾值
+
+                if (!header) {
+                    console.error("未找到 .sticky-header-map 元素");
+                    return;
+                }
+
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > scrollThreshold) {
+                        header.classList.add("scrolled");
+                    } else {
+                        header.classList.remove("scrolled");
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                // 初始化日期選擇器
+                $("#datepicker").datepicker({
+                    dateFormat: "yy-mm-dd", // jQuery UI 使用 dateFormat 而不是 format
+                    autoclose: true,
+                    todayHighlight: true,
+                    language: "zh-TW",
+                });
+
+                // 切換日曆顯示
+                $(".datepicker-toggle").on("click", function (e) {
+                    e.preventDefault();
+                    $("#datepicker").datepicker("show");
+                });
+            });
+        </script>
+            <!-- 引入 swiper -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Bootstrap Datepicker -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+        <script type="module" src="../main.js"></script>
+
+</body>
+
+</html>
