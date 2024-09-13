@@ -1,0 +1,24 @@
+.hotel-img {
+  max-height: 240px;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hotel-bg-img {
+  background: linear-gradient(-45deg,#E5E3DC,#B0A994), url(/assets/images/feature-tab-icon/Noise.png);
+
+  background-blend-mode: overlay;
+  
+  
+  transition: background 0.3s ease;
+
+  height: 100px;
+}
+
+
+.hotel-bg-img:hover {
+  background: linear-gradient(rgba(229, 227, 220, 1),rgb(158, 145, 106)), url(/assets/images/feature-tab-icon/Noise.png);
+
+  background-blend-mode: overlay;
+}

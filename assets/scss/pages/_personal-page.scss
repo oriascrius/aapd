@@ -1,0 +1,56 @@
+.personal-sort-btn {
+  background: linear-gradient(90deg,#ffffff,#B0A994), url(/assets/images/feature-tab-icon/Noise.png);
+
+  font-size: 14px;
+  color: #605448;
+}
+
+.btn-hover p {
+ color: #8A7F68;
+}
+
+.btn-hover:hover  {
+  background-color: #B0A994;
+}
+
+.btn-hover:hover p {
+  color: #ffffff;
+}
+
+.btn-hover:hover rect {
+  stroke: #ffffff;
+}
+
+.btn-hover:hover path {
+  stroke: #ffffff;
+}
+
+.btn-hr {
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-left: 1px solid #CDCABB;
+}
+
+.track {
+  color: #AFAFAF;
+  border-bottom: 2px solid #AFAFAF;
+}
+
+.track:hover {
+  color: #766A58;
+
+  border-bottom: 2px solid #766A58;
+}
+
+.personal-date {
+  font-size: 12px;
+}
+
+.personal-title {
+  font-size: 18px;
+}
+
+.personal-post-p {
+  font-size: 14px;
+}

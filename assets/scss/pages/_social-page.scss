@@ -1,0 +1,38 @@
+.sort-btn {
+  background: linear-gradient(90deg,#ffffff,#B0A994), url(/assets/images/feature-tab-icon/Noise.png);
+
+  font-size: 14px;
+  color: #605448;
+}
+
+.sort-btn:hover {
+  color: #000000;
+
+  background: linear-gradient(-225deg,#ffffff,#B0A994 50%), url(/assets/images/feature-tab-icon/Noise.png);
+}
+
+.post-p {
+  font-size: 14px;
+}
+
+.post-heart-p {
+  font-size: 12px;
+}
+
+.h-200 {
+  height: 200px;
+}
+
+.h-167 {
+  height: 167px;
+}
+
+.img-object {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.img-object-2 {
+  object-fit: cover;
+  object-position: 50% 0%;
+}
