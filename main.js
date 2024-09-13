@@ -4,8 +4,8 @@
 // import "swiper/css/bundle";
 
 import "./assets/scss/all.scss";
-import "./node_modules/bootstrap/dist/js/bootstrap.min.js";
-
+import "bootstrap/dist/js/bootstrap.min.js";
+// import "./node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 //  首頁導航選中狀態
 // 獲取所有的 li 元素
