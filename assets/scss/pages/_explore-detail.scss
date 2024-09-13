@@ -1,0 +1,87 @@
+// 圖片內容，活動時間、人數、價格
+.explore-detail-imgContent {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+// swiper 設定
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #b0a994;
+}
+// 分頁圓點距離
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 6px 6px 6px;
+}
+// 關於天橋立及伊根舟屋一日遊
+.explore-detail-trip {
+  border-bottom: 1px solid #d9d9d9;
+}
+// 集合地點
+.meeting-point {
+  h4 {
+    border-left: 3px solid #457bad;
+  }
+  ul {
+    padding-top: 6px;
+  }
+  div {
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+// 購買須知
+.purchase-notice {
+  padding-left: 18px;
+}
+// 加入行程按鈕
+.add-schedule {
+  box-shadow: 3px -3px 7.5px 0px #0000001a;
+  background-color: #ffffff;
+  .add-schedule-btn {
+    background-color: $secondary-200;
+    &:hover {
+      background-color: $secondary-500;
+    }
+  }
+  ul {
+    li:nth-child(1) {
+      a {
+        color: #f7f7f7;
+        border-radius: 32px;
+        padding: 11px;
+      }
+    }
+    li:nth-child(2) {
+      a {
+        background-color: #ffffffb2;
+        color: $secondary-500;
+        border: 1.5px solid, #747d65;
+        border-radius: 32px;
+        padding: 12px 39px;
+        &:hover {
+          background-color: $secondary-100;
+        }
+      }
+    }
+    li:nth-child(3) {
+      a {
+        background-color: $secondary-400;
+        color: #ffffff;
+        border-radius: 32px;
+        padding: 12px 39px;
+        &:hover {
+          background-color: $secondary-600;
+        }
+      }
+    }
+  }
+}
+// footer
+.explore-detail-footer {
+  padding: 21px 0 8px 0;
+  background-color: transparent;
+}

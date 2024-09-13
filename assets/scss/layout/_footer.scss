@@ -1,0 +1,33 @@
+.footer-clip-path {
+  clip-path: path("M 40 0 H 120 C 155 5 135 42 180 44 C 225 42 205 5 240 0 H 335 Q 375 0 375 30 V 93 H 0 V 30 Q 0 0 40 0");
+}
+
+.footer-bag {
+  top: 10%;
+  left: 48%;
+}
+
+.footer-icon {
+  background-color: #B0A994;
+}
+
+.footer-icon:hover {
+  background-color: #524941;
+}
+
+.footer-svg:hover {
+  stroke: #524941;
+  fill: #524941;
+}
+
+.footer-bed:hover {
+  content: url('/assets/images/icon/bed.svg');
+}
+
+.footer-globe:hover {
+  content: url('/assets/images/icon/globe.svg');
+}
+
+.footer-user:hover {
+  content: url('/assets/images/icon/user.svg');
+}
