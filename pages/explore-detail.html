@@ -271,6 +271,18 @@
         <!-- 引入 swiper -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script type="module" src="../main.js"></script>
+        <!-- 探索詳細頁、旅宿詳細共用 圖片 swiper -->
+        <script>
+            const explore_detail_swiper = new Swiper(".explore_detail_swiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    type: "bullets", // 只顯示圓點分頁
+                },
+            });
+        </script>
 </body>
 
 </html>

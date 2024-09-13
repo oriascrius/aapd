@@ -191,19 +191,23 @@
                     <div class="swiper_room_type pb-4">
                         <ul class="swiper-wrapper p-0">
                             <li class="swiper-slide w-auto">
-                                <img src="../assets/images/pic/kyoto15.png" alt="kyoto15" style="width: 95px; height: 95px;">
+                                <img src="../assets/images/pic/kyoto15.png" alt="kyoto15"
+                                    style="width: 95px; height: 95px;">
                                 <h4 class="fw-medium fs-5 text-gray-600 m-0 text-center">一人房</h4>
                             </li>
                             <li class="swiper-slide w-auto">
-                                <img src="../assets/images/pic/kyoto16.png" alt="kyoto16" style="width: 95px; height: 95px;">
+                                <img src="../assets/images/pic/kyoto16.png" alt="kyoto16"
+                                    style="width: 95px; height: 95px;">
                                 <h4 class="fw-medium fs-5 text-gray-600 m-0 text-center">雙人房</h4>
                             </li>
                             <li class="swiper-slide w-auto">
-                                <img src="../assets/images/pic/kyoto17.png" alt="kyoto17" style="width: 95px; height: 95px;">
+                                <img src="../assets/images/pic/kyoto17.png" alt="kyoto17"
+                                    style="width: 95px; height: 95px;">
                                 <h4 class="fw-medium fs-5 text-gray-600 m-0 text-center">四人房</h4>
                             </li>
                             <li class="swiper-slide w-auto">
-                                <img src="../assets/images/pic/kyoto18.png" alt="kyoto18" style="width: 95px; height: 95px;">
+                                <img src="../assets/images/pic/kyoto18.png" alt="kyoto18"
+                                    style="width: 95px; height: 95px;">
                                 <h4 class="fw-medium fs-5 text-gray-600 m-0 text-center">六人房</h4>
                             </li>
                         </ul>
@@ -444,6 +448,26 @@
         <!-- 引入 swiper -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script type="module" src="../main.js"></script>
+        <!-- 旅宿詳細頁面 - 房型介紹 圖片 swiper -->
+        <script>
+            const swiper_room_type_swiper = new Swiper(".swiper_room_type", {
+                slidesPerView: 3,
+                spaceBetween: 8,
+            });
+        </script>
+        <!-- 探索詳細頁、旅宿詳細共用 圖片 swiper -->
+        <script>
+            const explore_detail_swiper = new Swiper(".explore_detail_swiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    type: "bullets", // 只顯示圓點分頁
+                },
+            });
+        </script>
+
 </body>
 
 </html>
