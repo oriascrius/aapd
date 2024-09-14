@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品訂單</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/scss/pages/checkout.css"> -->
+    
+  </head>
+  <style>
+
+  </style>
+  <body>
+   <header class="po-header">
+    <div class="container">
+      <div class="d-flex justify-content-between px-3 py-2">
+        <div class="checkout-header-left d-flex align-items-center">
+          <a href="order_goods.html" class="me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M10 6.5L4 12.5M4 12.5C6.34315 14.8431 7.65685 16.1569 10 18.5M4 12.5H19" stroke="#766A58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <h5 class="h5 primary-600 m-0 p-0">
+            確認訂購資訊與付款
+          </h5>
+        </div>
+      </div>
+    </div>
+   </header>
+
+    <div class="container">
+      <div class="card border-primary-400 border-2 border-radius-16 my-3">
+          <div class="d-flex g-0">
+            <div class="">
+              <img class="img-fluid border-radius-8 chack-order-img "  src="../assets/images/pic/kyoto15.png" alt="..." width="80px" height="80px">
+            </div>
+            <div class="">
+              <div class="card-body p-2">
+                <div class="card-title m-0">
+                  <h4 class="h4 gray-600 m-0">吉村屋町家 四条大宮</h4>
+                </div>
+                <div class="card-text d-flex">
+                  <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="18px" height="22px" viewBox="0 0 24 25" fill="none">
+                    <path d="M20.1818 10.5909C20.1818 17.2727 11.5909 23 11.5909 23C11.5909 23 3 17.2727 3 10.5909C3 8.31246 3.90511 6.12733 5.51622 4.51622C7.12733 2.90511 9.31246 2 11.5909 2C13.8694 2 16.0545 2.90511 17.6656 4.51622C19.2767 6.12733 20.1818 8.31246 20.1818 10.5909Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.5907 12.9773C13.1722 12.9773 14.4543 11.6952 14.4543 10.1136C14.4543 8.53209 13.1722 7.25 11.5907 7.25C10.0091 7.25 8.72705 8.53209 8.72705 10.1136C8.72705 11.6952 10.0091 12.9773 11.5907 12.9773Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p class="caption gray-500 m-0">
+                    14-2 Mibubojocho, Nakagyo Ward, Kyoto, Kyoto, Japan                  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="assess border-radius-8">
+              <p class="primary-50 m-0">
+                4.7<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z" fill="#F5F4F1"/>
+                  </svg>
+              </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <ul class="order_subject mt-4 list-unstyled">
+        <li>
+          <h4 class="h4 mb-3">訂購資訊</h4>
+          <div class="border-bottom d-flex m-0 py-3">
+            <div class="user-title me-3 gray-600">
+              <p class="body-fs mb-2">訂購人</p>
+              <p class="body-fs mb-2">聯繫電話</p>
+              <p class="body-fs m-0">Email</p>
+            </div>
+            <div class="user-text gray-600">
+              <p class="body-fs mb-2">查理斯</p>
+              <p class="body-fs mb-2">+886 - 9 -12345645 </p>
+              <p class="body-fs m-0">chris0703221@gmail.com</p>
+            </div>
+          </div>
+          <ul class="border-bottom list-unstyled m-0 py-3 px-1">
+            <li class="body-fs fw-bold primary-500 mb-2">
+              <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <rect x="3" y="6.5" width="18" height="15" rx="2" stroke="#CDCABB" stroke-width="2"/>
+                <path d="M4 11.5H20" stroke="#CDCABB" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9 16.5H15" stroke="#CDCABB" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 3.5L8 7.5" stroke="#CDCABB" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 3.5L16 7.5" stroke="#CDCABB" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              日期
+            </li>
+            <li class="h4 gray-600 mb-2"> 08 / 07  - 08 / 10 <span class="h5 ms-2">共 2 晚</span></li>
+            <li class="body-fs fw-bold primary-500 text-certen mb-2">
+              <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <circle cx="9.02051" cy="7.5" r="3.1" stroke="#CDCABB" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M16.2019 7.45C16.4803 6.96766 16.939 6.61571 17.477 6.47156C18.015 6.32741 18.5882 6.40287 19.0705 6.68135C19.5528 6.95982 19.9048 7.4185 20.049 7.95648C20.1931 8.49446 20.1176 9.06766 19.8392 9.55C19.5607 10.0323 19.102 10.3843 18.564 10.5284C18.0261 10.6726 17.4528 10.5971 16.9705 10.3187C16.4882 10.0402 16.1362 9.5815 15.9921 9.04352C15.8479 8.50554 15.9234 7.93234 16.2019 7.45L16.2019 7.45Z" stroke="#CDCABB" stroke-width="1.8"/>
+                <path d="M15.82 19.5823L16.7108 19.454V19.454L15.82 19.5823ZM2.01014 19.5823L1.11933 19.454L2.01014 19.5823ZM8.91505 13.9463C11.2827 13.9463 12.67 14.9081 13.5296 16.0597C14.4229 17.2565 14.7865 18.7199 14.9291 19.7106L16.7108 19.454C16.5489 18.3304 16.1235 16.5257 14.9721 14.9831C13.7871 13.3953 11.8742 12.1463 8.91505 12.1463V13.9463ZM14.9291 19.7106C14.9303 19.7189 14.9301 19.7239 14.9299 19.7261C14.9298 19.7283 14.9294 19.7296 14.9292 19.7303C14.9288 19.7314 14.9271 19.7362 14.9202 19.7435C14.9058 19.7588 14.8694 19.7833 14.807 19.7833V21.5833C15.8913 21.5833 16.8866 20.6753 16.7108 19.454L14.9291 19.7106ZM14.807 19.7833H3.02305V21.5833H14.807V19.7833ZM3.02305 19.7833C2.96064 19.7833 2.9243 19.7588 2.90989 19.7435C2.903 19.7362 2.90128 19.7314 2.90092 19.7303C2.90068 19.7296 2.90034 19.7283 2.90015 19.7261C2.89996 19.7239 2.89975 19.7189 2.90095 19.7106L1.11933 19.454C0.943446 20.6753 1.93883 21.5833 3.02305 21.5833V19.7833ZM2.90095 19.7106C3.04363 18.7199 3.40723 17.2565 4.30049 16.0597C5.16006 14.9081 6.54739 13.9463 8.91505 13.9463V12.1463C5.95589 12.1463 4.04303 13.3953 2.85797 14.9831C1.7066 16.5257 1.28115 18.3304 1.11933 19.454L2.90095 19.7106Z" fill="#CDCABB"/>
+                <path d="M15.8806 19.8642L14.9899 19.9937L15.102 20.7642H15.8806V19.8642ZM22.9935 18.6599L22.1174 18.8659L22.9935 18.6599ZM14.4761 15.6132L13.7239 15.1189L13.4149 15.5892L13.7024 16.073L14.4761 15.6132ZM21.9851 18.9642H15.8806V20.7642H21.9851V18.9642ZM22.1174 18.8659C22.1219 18.8851 22.1198 18.8935 22.1192 18.8959C22.1182 18.8999 22.1154 18.9073 22.1071 18.9171C22.09 18.9371 22.051 18.9642 21.9851 18.9642V20.7642C23.1493 20.7642 24.1686 19.7253 23.8696 18.4539L22.1174 18.8659ZM18.1145 14.4C19.3571 14.4 20.223 15.0192 20.8678 15.9142C21.5307 16.8342 21.9119 17.992 22.1174 18.8659L23.8696 18.4539C23.6413 17.4828 23.1919 16.0606 22.3282 14.8619C21.4465 13.6382 20.0898 12.6 18.1145 12.6V14.4ZM15.2282 16.1075C15.8863 15.106 16.7901 14.4 18.1145 14.4V12.6C15.9962 12.6 14.5966 13.7911 13.7239 15.1189L15.2282 16.1075ZM13.7024 16.073C14.4666 17.3591 14.8257 18.8647 14.9899 19.9937L16.7712 19.7346C16.5909 18.4954 16.1849 16.7271 15.2498 15.1534L13.7024 16.073Z" fill="#CDCABB"/>
+              </svg>
+              人數
+            </li>
+            <li class="gray-600 mb-2">2 位成人、 1位兒童</li>
+          </ul>
+        </li>
+        <li class="border-bottom m-0 py-3">
+          <h4 class="h4 mb-3">訂購房型</h4>
+          <p class="gray-600 m-0 d-flex justify-content-between">雙人房 x 2 <span class="h4 primary-500">NT $7100</span></p>
+        </li>
+        <li class="border-bottom m-0 p-0">
+          <h4 class="h4 my-3">選擇優惠券</h4>
+          <form class="row g-3 align-items-center">
+            <div class="col">
+              <div class="input-group mb-3 d-flex align-items-center">
+                <label class="gray-500 me-2" for="">使用折扣優惠券</label>
+                <input type="number" class="coupon-input form-control border-primary-400 rounded-pill rounded-end border-end-0 border-2" style="background: #E5E3DC;" placeholder="123-444" aria-label="Recipient's username" aria-describedby="basic-addon2" id=""  disabled>
+                <div class="input-group-append">
+                  <button class="coupon-button btn border-primary-400 rounded-pill rounded-start border-start-0 border-2" style="background: #E5E3DC;" type="button" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.16274 3.54004H18.8373C19.3656 3.54002 19.8189 3.54001 20.1918 3.57048C20.5847 3.60258 20.9721 3.67322 21.3439 3.86266C21.9008 4.14645 22.3536 4.59927 22.6374 5.15623C22.8269 5.52803 22.8975 5.9154 22.9296 6.30827C22.9601 6.68119 22.9601 7.13452 22.96 7.66276V9.00004C22.96 9.53023 22.5302 9.96004 22 9.96004C20.5972 9.96004 19.46 11.0972 19.46 12.5C19.46 13.9028 20.5972 15.04 22 15.04C22.5302 15.04 22.96 15.4698 22.96 16V17.3373C22.9601 17.8656 22.9601 18.3189 22.9296 18.6918C22.8975 19.0847 22.8269 19.4721 22.6374 19.8439C22.3536 20.4008 21.9008 20.8536 21.3439 21.1374C20.9721 21.3269 20.5847 21.3975 20.1918 21.4296C19.8189 21.4601 19.3656 21.4601 18.8373 21.46H5.16276C4.63453 21.4601 4.18119 21.4601 3.80827 21.4296C3.4154 21.3975 3.02803 21.3269 2.65623 21.1374C2.09927 20.8536 1.64645 20.4008 1.36266 19.8439C1.17322 19.4721 1.10258 19.0847 1.07048 18.6918C1.04001 18.3189 1.04002 17.8656 1.04004 17.3373L1.04004 16C1.04004 15.4698 1.46985 15.04 2.00004 15.04C3.40284 15.04 4.54004 13.9028 4.54004 12.5C4.54004 11.0972 3.40284 9.96004 2.00004 9.96004C1.46985 9.96004 1.04004 9.53023 1.04004 9.00004L1.04004 7.66274C1.04002 7.13451 1.04001 6.68119 1.07048 6.30827C1.10258 5.9154 1.17322 5.52803 1.36266 5.15623C1.64645 4.59927 2.09927 4.14645 2.65623 3.86266C3.02803 3.67322 3.4154 3.60258 3.80827 3.57048C4.18119 3.54001 4.63451 3.54002 5.16274 3.54004ZM3.96462 5.4841C3.69048 5.5065 3.58391 5.54485 3.52789 5.57339C3.3322 5.6731 3.1731 5.8322 3.07339 6.02789C3.04485 6.08391 3.0065 6.19048 2.9841 6.46462C2.96079 6.74996 2.96004 7.12415 2.96004 7.70004V8.14362C4.96182 8.58273 6.46004 10.3664 6.46004 12.5C6.46004 14.6337 4.96182 16.4174 2.96004 16.8565V17.3C2.96004 17.8759 2.96079 18.2501 2.9841 18.5355C3.0065 18.8096 3.04485 18.9162 3.07339 18.9722C3.1731 19.1679 3.3322 19.327 3.52789 19.4267C3.58391 19.4552 3.69048 19.4936 3.96462 19.516C4.24996 19.5393 4.62415 19.54 5.20004 19.54H18.8C19.3759 19.54 19.7501 19.5393 20.0355 19.516C20.3096 19.4936 20.4162 19.4552 20.4722 19.4267C20.6679 19.327 20.827 19.1679 20.9267 18.9722C20.9552 18.9162 20.9936 18.8096 21.016 18.5355C21.0393 18.2501 21.04 17.8759 21.04 17.3V16.8565C19.0383 16.4174 17.54 14.6337 17.54 12.5C17.54 10.3664 19.0383 8.58273 21.04 8.14362V7.70004C21.04 7.12415 21.0393 6.74996 21.016 6.46462C20.9936 6.19048 20.9552 6.08391 20.9267 6.02789C20.827 5.8322 20.6679 5.6731 20.4722 5.57339C20.4162 5.54485 20.3096 5.5065 20.0355 5.4841C19.7501 5.46079 19.3759 5.46004 18.8 5.46004H5.20004C4.62415 5.46004 4.24996 5.46079 3.96462 5.4841ZM10 6.54004C10.5302 6.54004 10.96 6.96985 10.96 7.50004V8.50004C10.96 9.03023 10.5302 9.46004 10 9.46004C9.46985 9.46004 9.04004 9.03023 9.04004 8.50004V7.50004C9.04004 6.96985 9.46985 6.54004 10 6.54004ZM10 11.04C10.5302 11.04 10.96 11.4698 10.96 12V13C10.96 13.5302 10.5302 13.96 10 13.96C9.46985 13.96 9.04004 13.5302 9.04004 13V12C9.04004 11.4698 9.46985 11.04 10 11.04ZM10 15.54C10.5302 15.54 10.96 15.9698 10.96 16.5V17.5C10.96 18.0302 10.5302 18.46 10 18.46C9.46985 18.46 9.04004 18.0302 9.04004 17.5V16.5C9.04004 15.9698 9.46985 15.54 10 15.54Z" fill="#B0A994"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="border-bottom m-0 py-3">
+          <h4 class="h4 mb-3">費用明細</h4>
+          <h5 class="h5 gray-500 m-0 d-flex justify-content-between">原價格<span>NT $7100</span></h5>
+          <h5 class="h5 gray-500 m-0 d-flex justify-content-between">優惠折扣 (10%)<span>-NT $ 280</span></h5>
+          <h4 class="h4 gray-600 m-0 mt-3 d-flex justify-content-between">總計<span>NT$6820</span></h4>
+        </li>
+        <li class="border-bottom m-0 py-3">
+          <h4 class="h4 mb-3">付款方式</h4>
+          <h5 class="h5 gray-500 m-0">
+              <svg class="me-2"  xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M21 4.5H3C1.89543 4.5 1 5.39543 1 6.5V18.5C1 19.6046 1.89543 20.5 3 20.5H21C22.1046 20.5 23 19.6046 23 18.5V6.5C23 5.39543 22.1046 4.5 21 4.5Z" stroke="#CDCABB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 10.5H23" stroke="#CDCABB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.29004 15C9.00002 15 11.29 15 11.29 15" stroke="#CDCABB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              信用卡支付
+          </h5>
+        </li>
+        <li class="border-bottom m-0 py-3">
+          <h4 class="h4 mb-3">退訂政策</h4>
+          <ul class="body-fs gray-600 ps-3">
+            <li>取消和預付款政策根據住宿類型而有所不同。選擇時請先確認每個選項適用的條件為何。</li>
+            <li>2024年8月9日前取消完全免費 你可輕鬆取消或更改預訂，完全免費！</li>
+          </ul>
+        </li>
+        <li class="m-0 py-3">
+          <h4 class="h4 mb-3">住宿規定</h4>
+          <h5 class="h5 mb-3 gray-600">預定取消 / 預付政策</h5>
+          <p class="m-0 body-fs gray-600">如果您在辦理入住前48小時取消訂房，酒店將不收取任何退訂費用; 如果您在辦理入住前24小時取消訂房，您將會被收取20％的手續費，如果您在入住當天取消訂單，您將被收取80％的手續費，如果您未能通知我們取消訂單，將從您的信用卡中扣除100％的費用。</p>
+        </li>
+        
+      </ul>
+    
+    </div>
+
+    <footer class="checkout-footer py-2 mt-3" style="box-shadow: 0 0 8px lightgray;">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-7 px-4 footer-text">
+            <h3 class="h3-en gray-600 m-0">NT $6820</h3>
+            <p class="gray-500 m-0">08月07日至10日 共2晚</p>
+          </div>
+          <a href="order_completed.html" type="button" class="col btn btn-footer rounded-pill me-4">確定訂購</a>
+        </div>
+      </div>
+    </footer>
+    
+    <script type="module" src="../main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+  </body>
+</html>
