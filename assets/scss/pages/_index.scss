@@ -16,7 +16,24 @@ a {
     text-decoration: none;
   }
 }
+// 
+.indexStar-header {
+  padding: 14px 14px 12px 21px;
+  .indexStar-header-list {
+    li {
+      &:nth-child(1),
+      &:nth-child(2) {
+        padding-right: 5px;
+      }
+    }
+  }
+}
 
+// index 第一頁圖片(背景)圓角，這裡是用 img 控制
+.indexStar-img{
+  border-radius: 20px;
+}
+// index_1、index_2、index_3 使用背景插入圖片
 .start-background {
   background-image: url("../images/background-img/background.png");
   background-repeat: no-repeat;
@@ -24,9 +41,6 @@ a {
   background-position: center;
   max-width: 100%;
   height: 812px;
-  .start-wrapper {
-    padding-top: 113px;
-  }
   // 選項按鈕
   .index-btn {
     cursor: pointer;
@@ -35,7 +49,7 @@ a {
     background-color: #e5e3dc;
     border: 1.5px solid #998f76;
   }
-  // 選項外圍
+  // 選項外圍 
   .start-list {
     padding-bottom: 118px;
   }
@@ -61,4 +75,26 @@ a {
     color: #ffffff;
     border-radius: 20px;
   }
+}
+// index_1
+.index_1-wrapper {
+  padding-top: 113px;
+}
+// index_2、index_3
+.index_23-wrapper {
+  padding-top: 137px;
+}
+// index 的 footer
+.index-footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+// index_1、index_2、index_3 的 footer
+.index-sec-footer {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
 }
