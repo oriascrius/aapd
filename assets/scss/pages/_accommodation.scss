@@ -284,31 +284,41 @@ img {
   color: #6a6a6a;
   width: 100%;
   margin-bottom: 12px;
-  .datepicker-days {
-    width: 100%;
-  }
   .table-condensed {
     width: 100%;
   }
 }
-
-.datepicker table tbody tr td.active {
-  background-color: #dd1111; /* 自定义选中日期单元格背景颜色 */
-  color: #ffffff; /* 自定义选中日期单元格文字颜色 */
+// 不能直接用background-image 改，只好照 f12 原本的貼上來改
+.datepicker table tr td.active.active {
+  background-image: linear-gradient(to bottom, #e5e3dc, #e5e3dc);
+  color: #6a6a6a;
 }
-.datepicker table tbody tr td.day:hover {
-  background-color: #23ca4d; /* 自定义日期单元格悬停背景颜色 */
+// 日曆當天顏色
+.datepicker table tr td.today {
+  background-image: linear-gradient(to bottom, #919982, #919982);
+  color: #ffffff;
 }
-// 控制每一個日期寬度
-.datepicker th {
-  text-align: center;
-  width: 61px;
+.table-condensed thead tr:nth-child(2) th {
+  padding-bottom: 32px;
+}
+.table-condensed thead tr:nth-child(3) {
+  background-color: #e5e3dc;
+  color: #766a58;
+  font-family: 600;
+  font-size: 14px;
+  border-radius: 0;
+  padding: 4px 0;
+}
+.table-condensed thead tr:nth-child(3) th {
+  border-radius: 0;
+}
+.table-condensed tbody {
+  height: 158px;
+}
+.table-condensed tbody tr td.day {
+  width: 20px;
   height: 20px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: none;
-  margin-bottom: 8px;
+  padding: 4px 10px;
 }
 /* 隐藏不属于当前月份的日期 */
 .datepicker .old,
