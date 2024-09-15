@@ -18,8 +18,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- 引入 jQuery UI CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script type="module" crossorigin src="/aapd/assets/main-8e159c42.js"></script>
-  <link rel="stylesheet" href="/aapd/assets/main-c88b8bd3.css">
+  <script type="module" crossorigin src="/aapd/assets/main-1014cb88.js"></script>
+  <link rel="stylesheet" href="/aapd/assets/main-3a7ebccb.css">
 </head>
 
 <body class="accommodation-background mx-auto" style="width: 375px;">
@@ -47,7 +47,7 @@
                         </a>
                         <h3 class="fw-medium fs-5 mb-0 mt-2 text-primary-600">旅 宿</h3>
                         <!-- 鈴鐺 icon -->
-                        <a href="./hotel-page.html" class="ms-auto">
+                        <a href="#" class="ms-auto">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -421,7 +421,7 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <!-- Bootstrap Datepicker -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        
+
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
@@ -505,6 +505,38 @@
                     } else {
                         header.classList.remove("scrolled");
                     }
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                // 自定义语言设置
+                $.fn.datepicker.dates['custom'] = {
+                    days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                    daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+                    daysMin: ["S", "M", "T", "W", "T", "F", "S"],
+                    months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                    monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+                    today: "今天",
+                    clear: "清除",
+                    format: "yyyy-mm-dd",
+                    // titleFormat: "yyyy年 MM月", /* 第一排年分 + 月份' */
+                    titleFormat: "MM",
+                    weekStart: 0 // 设置星期一为一周的开始
+                };
+
+                // 初始化日期選擇器
+                $("#datepicker").datepicker({
+                    format: "mm-dd",
+                    autoclose: true,
+                    todayHighlight: true,
+                    language: "custom" // 使用上面自定义语言设置
+                });
+
+                // 切換日曆顯示
+                $(".datepicker-toggle").on("click", function (e) {
+                    e.preventDefault();
+                    $("#datepicker").datepicker("show");
                 });
             });
         </script>
