@@ -16,7 +16,7 @@ a {
     text-decoration: none;
   }
 }
-// 
+//
 .indexStar-header {
   padding: 14px 14px 12px 21px;
   .indexStar-header-list {
@@ -30,8 +30,9 @@ a {
 }
 
 // index 第一頁圖片(背景)圓角，這裡是用 img 控制
-.indexStar-img{
+.indexStar-img {
   border-radius: 20px;
+  width: 375px;
 }
 // index_1、index_2、index_3 使用背景插入圖片
 .start-background {
@@ -39,6 +40,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
   max-width: 100%;
   height: 812px;
   // 選項按鈕
@@ -49,7 +51,7 @@ a {
     background-color: #e5e3dc;
     border: 1.5px solid #998f76;
   }
-  // 選項外圍 
+  // 選項外圍
   .start-list {
     padding-bottom: 118px;
   }

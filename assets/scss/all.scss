@@ -11,9 +11,11 @@
 
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
-// 旅宿細節 css
-@import "./layout/phone-header.scss";
 
+// 共用手機電量 icon
+@import "./layout/phone-header.scss";
+// 地圖頁面
+@import "./pages/map-mode.scss";
 // 旅宿頁面
 @import "./pages/accommodation.scss";
 // 旅宿細節頁面

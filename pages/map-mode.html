@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌟𝓐-𝓐-𝓟-𝓓🌠- 地圖模式</title>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="mx-auto" style="width: 375px;">
+
+    <%- include('./layout/phone-header'); -%>
+        <main class="accommodation-background">
+            <section>
+                <div class="py-3 px-5">
+                    <div class="d-flex align-items-center">
+                        <!-- 向左 icon -->
+                        <a href="./explore.html">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <path d="M10 6.5L4 12.5M4 12.5C6.34315 14.8431 7.65685 16.1569 10 18.5M4 12.5H19"
+                                    stroke="#766a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-5">
+                    <!-- 導航 -->
+                    <ul class="nav nav-tabs justify-content-around border-0 flex-nowrap text-center" id="myTab" role="tablist">
+                        <li class="nav-item w-100">
+                            <a class="nav-link active fw-medium fs-5 text-gray-400 bg-transparent border-2 border-bottom border-gary-400 border-0 m-0" id="explore-tab" data-toggle="tab" href="#explore" role="tab"
+                                aria-controls="explore" aria-selected="true">探索</a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a class="nav-link" id="accommodation-tab" data-toggle="tab" href="#accommodation"
+                                role="tab" aria-controls="accommodation" aria-selected="false">旅宿</a>
+                        </li>
+                    </ul>
+                    <!-- 導航内容 -->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="explore" role="tabpanel"
+                            aria-labelledby="explore-tab">
+                            <h3>探索页面</h3>
+                            <p>这里是探索页面的内容。</p>
+                        </div>
+                        <div class="tab-pane fade" id="accommodation" role="tabpanel"
+                            aria-labelledby="accommodation-tab">
+                            <h3>旅宿页面</h3>
+                            <p>这里是旅宿页面的内容。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="explore-detail-footer d-flex justify-content-around">
+                    <svg width="134" height="5" viewBox="0 0 134 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="134" height="5" rx="2.5" fill="black" />
+                    </svg>
+                </div>
+            </footer>
+        </main>
+        <!-- 引入 swiper -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="module" src="../main.js"></script>
+
+</body>
+
+</html>

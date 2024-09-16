@@ -23,5 +23,12 @@
     "sass-loader": "^13.2.2",
     "swiper": "^11.1.12",
     "vite-plugin-live-reload": "^3.0.2"
-  }
+  },
+  "description": "- 專案的 Node.js 版本需為 v16 以上\r   - 查看自己版本指令：`node -v`",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
 }
