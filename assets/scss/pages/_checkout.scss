@@ -1,12 +1,61 @@
 body {
   font-family: "Noto Sans TC", "SF Pro Display", system-ui;
   line-height: 1.5;
+  width: 375px;
+  margin: 0 auto;
+}
+/* header大小+固定上方 */
+.checkout-header{
+  width: 375px;
+  height: 46px;
+  background: #fff;
+  position: fixed; /* 固定位置 */
+  top: 0; /* 距離底部 0 像素 */
+  left: calc(50% - 188px); /* 距離左側 0 像素 */
+  z-index: 100;
+}
+/* 修正margin重疊問題 */
+.checkout-container{
+  display: flex;
+  flex-direction: column;
+}
+/* 總內容拉開與footer的距離 */
+.distance-y{
+  background: #fff;
+  margin-top: 46px;
+  margin-bottom: 98px;
+}
+/* footer大小+固定下方 */
+.checkout-footer{
+  width: 375px;
+  height: 74px;
+  background: #fff;
+  position: fixed; /* 固定位置 */
+  bottom: 0; /* 距離底部 0 像素 */
+  left: calc(50% - 188px); /* 距離左側 0 像素 */
+  z-index: 100;
+}
+/* footer 按鈕 */
+.btn-footer, .btn-footer:hover {
+  max-width: calc(45% - 1.5rem);
+  height: 50px;
+  line-height: 2;
+  background: #919982;
+  color: #fff;
 }
 
+/*----↑↑↑ 共用頁 ↑↑↑----*/
+
+
+
+/* header原底線 */
 .sp-header,
 .og-header {
   border-bottom: 3px solid #cdcabb;
   position: relative;
+}
+.po-header {
+  border-bottom: 3px solid #766a58;
 }
 /* select_product header漸層底線 */
 .sp-header::before {
@@ -30,84 +79,6 @@ body {
   top: 43px;
   left: 0;
 }
-/* product_order header原底線 */
-.po-header {
-  border-bottom: 3px solid #766a58;
-}
-/* footer 按鈕 */
-.btn-footer {
-  max-width: calc(45% - 1.5rem);
-  height: 50px;
-  line-height: 2;
-  background: #919982;
-  color: #fff;
-}
-
-.border-radius-8 {
-  border-radius: 8px;
-}
-.border-radius-16 {
-  border-radius: 16px;
-}
-.border-radius-12 {
-  border-radius: 12px;
-}
-.border-primary-400 {
-  border: 1.5px solid #998f76;
-}
-
-.h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-.h3-en {
-  font-size: 20px;
-  font-weight: bold;
-}
-.h4 {
-  font-size: 18px;
-  font-weight: bold;
-}
-.h5 {
-  font-size: 16px;
-}
-.body-fs {
-  font-size: 14px;
-  line-height: 1.8;
-}
-.caption {
-  font-size: 12px;
-}
-.fw-bold {
-  font-weight: bold;
-}
-
-.primary-50 {
-  color: #f5f4f1;
-}
-.primary-300 {
-  color: #b0a994;
-}
-.primary-500 {
-  color: #8a7f68;
-}
-.primary-600 {
-  color: #766a58;
-}
-.gray-500 {
-  color: #969696;
-}
-.gray-600 {
-  color: #4b4b4b;
-}
-.secondary-400 {
-  color: #919982;
-}
-.secondary-500 {
-  color: #747d65;
-}
-
-
 /* select_product 加減按鈕 */
 .btn-plus,
 .btn-minus,
@@ -123,11 +94,47 @@ body {
   justify-content: center;
 }
 .btn-plus:active,
-.btn-minus:active {
+.btn-minus:active,
+.btn-plus:hover,
+.btn-minus:hover {
   background: #747D65;
   color: #fff;
-}/**/
+}
+/* 因為指定card圖片的大小，所以要將border寬度加上去 */
+.checkout-card{
+  width: 347px;
+}
+.sp-card-img {
+  width: 100%;
+  max-width: 311px;
+  height: 160px;
+  overflow: hidden;
+  position: relative; /* 進行絕對定位 */
+  overflow: hidden; /* 防止水平滾動條 */
+}
+.sp-card-img img{
+  object-fit: cover; /* 保持等比縮放並覆蓋容器 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*置中圖片*/
+}
 
+.og-img {
+  max-width: 343px;
+  height: 151px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  position: relative; /* 進行絕對定位 */
+  overflow: hidden; /* 防止水平滾動條 */
+}
+.og-img img{
+  object-fit: cover; /* 保持等比縮放並覆蓋容器 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*置中圖片*/
+}
 
 /* order_goods 折價券*/
 .coupon-input,
@@ -179,16 +186,11 @@ input[type="radio"]:checked {
   overflow: hidden;
   margin: 8px 12px;
 }
-/* 項目符號 */
-.caption-list{
-  list-style-type: disc;
-  margin-left: 24px;
-  // text-indent: -4px; 縮排 
-}
 
 /* product_order 卡片圖 */
 .chack-order-img {
   max-width: 80px;
+  width: 80px;
   height: 80px;
   overflow: hidden;
   margin: 8px;
@@ -196,9 +198,8 @@ input[type="radio"]:checked {
 /* product_order 卡片星星評價 */
 .assess {
   background: #766a58;
-  margin: 8px;
   text-align: center;
-  padding: 15px 0;
+  padding: 14.5px 6px;
 }
 
 /* order_completed 背景 */
@@ -207,7 +208,7 @@ input[type="radio"]:checked {
   // background-image: url(../../images/background-img/background-2.png);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100%;
+  background-size: 375px;
 }
 /* order_completed 按鈕*/
 .btn-finish-index,
@@ -216,11 +217,96 @@ input[type="radio"]:checked {
   line-height: 2;
   border: 1px solid #747d65;
 }
-.btn-finish-index {
+.btn-finish-index,.btn-finish-index:hover {
   background: #747d65;
   color: #fff;
 }
-.btn-finish-search {
+.btn-finish-search,.btn-finish-search:hover {
   background: #fff;
   color: #747d65;
 }
+
+/*----↑↑↑ page當頁 ↑↑↑----*/
+
+
+
+.border-radius-8 {
+  border-radius: 8px;
+}
+.border-radius-16 {
+  border-radius: 16px;
+}
+.border-radius-12 {
+  border-radius: 12px;
+}
+.border-primary-400 {
+  border: 1.5px solid #998f76;
+}
+
+.h2 {
+  font-family: "Noto Sans TC", system-ui;
+  font-size: 24px;
+  font-weight: bold;
+}
+.h3-en {
+  font-family: "SF Pro Display", system-ui;
+  font-size: 20px;
+  font-weight: bold;
+}
+.h4 {
+  font-family: "Noto Sans TC", system-ui;
+  font-size: 18px;
+  font-weight: bold;
+}
+.h5 {
+  font-family: "Noto Sans TC", system-ui;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.body-fs {
+  font-family: "Noto Sans TC", system-ui;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.caption {
+  font-family: "Noto Sans TC", system-ui;
+  font-size: 12px;
+}
+.fw-bold {
+  font-weight: bold;
+}
+
+.primary-50 {
+  color: #f5f4f1;
+}
+.primary-300 {
+  color: #b0a994;
+}
+.primary-500 {
+  color: #8a7f68;
+}
+.primary-600 {
+  color: #766a58;
+}
+.gray-500 {
+  color: #969696;
+}
+.gray-600 {
+  color: #4b4b4b;
+}
+.secondary-400 {
+  color: #919982;
+}
+.secondary-500 {
+  color: #747d65;
+}
+
+/* 項目符號 */
+.caption-list{
+  list-style-type: disc;
+  margin-left: 24px;
+  // text-indent: -4px; 縮排 
+}
+/*----↑↑↑ 元件 ↑↑↑----*/
+
+
