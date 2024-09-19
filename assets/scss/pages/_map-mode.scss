@@ -1,0 +1,157 @@
+.map-nav-link {
+  color: #afafaf;
+  border-bottom: 2px solid #afafaf;
+  padding-bottom: 10px;
+}
+.map-nav-link .map-mode-activeTab {
+  color: #766a58;
+  border-bottom: 2px solid #766a58;
+}
+// 探索、旅宿 按鈕選中設定
+.map-mode-activeTab {
+  color: #766a58;
+  border-bottom: 2px solid #766a58;
+}
+
+// 控制圖片內部
+.map-content {
+  position: relative;
+  width: 600px;
+  height: 720px;
+  overflow: hidden;
+}
+.map-content {
+  .map-content-backImg {
+    position: absolute;
+    margin-left: -72px;
+    margin-top: 50px;
+    height: 720px;
+    transform: scale(1.2);
+    overflow: hidden;
+  }
+}
+// 日期 人數按鈕
+.date-people-price {
+  position: absolute;
+  border: 1.5px solid var(--color-brown-500, #8a7f68);
+  color: #f5f4f1;
+  padding: 8px 14px;
+  border-radius: 16px;
+  background-color: $primary-50;
+  left: 16px;
+  top: 16px;
+  span {
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #b0a994;
+  }
+}
+// 篩選按鈕
+.filter-btn {
+  position: absolute;
+  left: 315px;
+  top: 16px;
+}
+
+// ==================================== 探索頁 (探索業沒做先複製旅宿同用，但因為JS只能控制單獨一頁只能另外設置 class) ====================================
+// 地圖內 地點價格按鈕
+.explore-price-dot-btn {
+  position: absolute;
+  width: 111px;
+  height: 50px;
+}
+// 按下地圖內 地點價格按鈕 後的內容
+.explore-map-price-wrapper {
+  display: none;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 80px;
+  width: 375px;
+  border-radius: 24px 24px 0px 0px;
+  box-shadow: 3px -3px 7.5px 0px #0000001a;
+}
+// ==================================== 探索頁 ====================================
+
+// ==================================== 旅宿頁 ====================================
+// 地圖內 地點價格按鈕
+.price-dot-btn {
+  position: absolute;
+  width: 111px;
+  height: 50px;
+}
+// 地圖內 地點價格按鈕 選中後樣式
+.price-dot-active {
+  svg rect {
+    fill: #766a58; /* 你想要的颜色 */
+  }
+  svg path:nth-child(1) {
+    fill: #766a58;
+  }
+  svg path:nth-child(2) {
+    fill: #f5f4f1;
+  }
+}
+// 按下地圖內 地點價格按鈕 後的內容
+.map-price-wrapper {
+  display: none;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 80px;
+  width: 375px;
+  border-radius: 24px 24px 0px 0px;
+  box-shadow: 3px -3px 7.5px 0px #0000001a;
+}
+// ==================================== 旅宿頁 ====================================
+
+.map-price-content-img {
+  img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
+.map-mode-add-schedule {
+  position: absolute;
+  bottom: -97px;
+  background-color: #ffffff;
+  .add-schedule-btn {
+    background-color: $secondary-200;
+    &:hover {
+      background-color: $secondary-500;
+    }
+  }
+  ul {
+    li:nth-child(1) {
+      a {
+        color: #f7f7f7;
+        border-radius: 32px;
+        padding: 11px;
+      }
+    }
+    li:nth-child(2) {
+      a {
+        background-color: #ffffffb2;
+        color: $secondary-500;
+        border: 1.5px solid, #747d65;
+        border-radius: 32px;
+        padding: 12px 39px;
+        &:hover {
+          background-color: $secondary-100;
+        }
+      }
+    }
+    li:nth-child(3) {
+      a {
+        background-color: $secondary-400;
+        color: #ffffff;
+        border-radius: 32px;
+        padding: 12px 39px;
+        &:hover {
+          background-color: $secondary-600;
+        }
+      }
+    }
+  }
+}
