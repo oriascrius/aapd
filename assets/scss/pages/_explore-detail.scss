@@ -39,6 +39,11 @@
 }
 // 加入行程按鈕
 .add-schedule {
+  position: fixed;
+  bottom: 0;
+  z-index: 1030;
+  width: auto;
+  transition: bottom 0.1s;
   box-shadow: 3px -3px 7.5px 0px #0000001a;
   background-color: #ffffff;
   .add-schedule-btn {
@@ -48,40 +53,37 @@
     }
   }
   ul {
-    li:nth-child(1) {
-      a {
-        color: #f7f7f7;
-        border-radius: 32px;
-        padding: 11px;
+    li:nth-child(1) a {
+      color: #f7f7f7;
+      border-radius: 32px;
+      padding: 11px;
+    }
+    li:nth-child(2) a {
+      background-color: #ffffffb2;
+      color: $secondary-500;
+      border: 1.5px solid, #747d65;
+      border-radius: 32px;
+      padding: 12px 39px;
+      &:hover {
+        background-color: $secondary-100;
       }
     }
-    li:nth-child(2) {
-      a {
-        background-color: #ffffffb2;
-        color: $secondary-500;
-        border: 1.5px solid, #747d65;
-        border-radius: 32px;
-        padding: 12px 39px;
-        &:hover {
-          background-color: $secondary-100;
-        }
-      }
-    }
-    li:nth-child(3) {
-      a {
-        background-color: $secondary-400;
-        color: #ffffff;
-        border-radius: 32px;
-        padding: 12px 39px;
-        &:hover {
-          background-color: $secondary-600;
-        }
+    li:nth-child(3) a {
+      background-color: $secondary-400;
+      color: #ffffff;
+      border-radius: 32px;
+      padding: 12px 39px;
+      &:hover {
+        background-color: $secondary-600;
       }
     }
   }
 }
-// footer
-.explore-detail-footer {
-  padding: 21px 0 8px 0;
-  background-color: transparent;
+.add-schedule.explore-normal {
+  position: absolute;
+  bottom: -95px;
+}
+.add-schedule.accommodation-normal {
+  position: absolute;
+  bottom: -110px;
 }

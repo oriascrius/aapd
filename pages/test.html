@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>日期選擇器示例</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <!-- 日期 -->
+    <li class="tab-list-btn">
+        <a href="#" class="d-flex align-items-center justify-content-center datepicker-toggle" data-toggle="collapse"
+            data-target="#datepickerCollapse" aria-expanded="false" aria-controls="datepickerCollapse"
+            id="selectedDateBtn">
+            日期
+        </a>
+    </li>
+
+    <!-- 日曆 -->
+    <div class="collapse horizontal-collapse" id="datepickerCollapse" data-parent="#accordionExample">
+        <div class="card datepicker-card-body">
+            <table id="datepicker">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <!-- 更多日期 -->
+                </tr>
+            </table>
+            <div class="datepicker-footer">
+                <a href="#" class="fw-medium fs-5">搜尋</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#datepicker').on('click', 'td', function () {
+                const selectedDate = $(this).text(); // 獲取選中的日期
+                console.log('Selected Date:', selectedDate); // 調試輸出
+                $('#selectedDateBtn').text(selectedDate); // 更新連結文本
+            });
+        });
+    </script>
+</body>
+
+</html>
