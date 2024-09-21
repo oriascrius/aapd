@@ -81,9 +81,7 @@ body {
 }
 /* select_product 加減按鈕 */
 .btn-plus,
-.btn-minus,
-.btn-plus:focus,
-.btn-minus:focus {
+.btn-minus {
   width: 40px;
   height: 40px;
   font-size: 28px;
@@ -92,12 +90,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+}
+.btn-plus:hover,
+.btn-minus:hover{
+  background: #747D65; /* hover 時變為這個顏色 */
+  color: #fff;
 }
 .btn-plus:active,
 .btn-minus:active,
-.btn-plus:hover,
-.btn-minus:hover {
-  background: #747D65;
+.btn-plus:focus,
+.btn-minus:focus{
+  background: #bdc2b3; /* active 和 focus 時恢復成這個顏色 */
   color: #fff;
 }
 /* 因為指定card圖片的大小，所以要將border寬度加上去 */
