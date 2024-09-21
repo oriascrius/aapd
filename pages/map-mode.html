@@ -10,7 +10,7 @@
 
 <body class="mx-auto p-0" style="width: 375px;">
 
-    <main class="">
+    <main>
         <section>
             <div class="py-3 px-5 sticky-header-sec">
                 <div class="d-flex align-items-center">
@@ -24,6 +24,7 @@
                     </a>
                 </div>
             </div>
+            <h3 class="m-0 text-center">地圖模式</h3>
             <div class="pt-5">
                 <!-- 導航 -->
                 <ul class="nav nav-tabs justify-content-around border-0 flex-nowrap text-center" id="myTab"
@@ -39,7 +40,8 @@
                     </li>
                 </ul>
                 <!-- 導航内容 -->
-                <div class="tab-content position-relative overflow-hidden" id="myTabContent" style="background: #FFFFFF;">
+                <div class="tab-content position-relative overflow-hidden" id="myTabContent"
+                    style="background: #FFFFFF;">
                     <!-- 探索 -->
                     <div class="tab-pane fade map-content" id="explore" role="tabpanel" aria-labelledby="explore-tab"
                         aria-selected="false">
@@ -250,7 +252,7 @@
                         </a>
                         <!-- 按下地圖內 地點價格按鈕 後的內容 -->
                         <div class="explore-map-price-wrapper">
-                            <div class="map-price-content d-flex justify-content-center pt-6 pe-5 pb-5">
+                            <div class="d-flex justify-content-center pt-6 pe-5 pb-5">
                                 <div class="map-price-content-img me-4">
                                     <img src="../assets/images/pic/kyoto20.png" alt="kyoto20">
                                 </div>
@@ -289,7 +291,7 @@
                             </div>
                             <!-- 加入行程按鈕 -->
                             <div class="map-mode-add-schedule">
-                                <div class="py-3 px-4" style="margin-bottom: 34px;">
+                                <div class="py-3 px-4">
                                     <ul class="list-unstyled m-0 d-flex align-items-center">
                                         <li class="d-flex align-items-center">
                                             <a href="#" class="me-3 add-schedule-btn">
@@ -302,8 +304,7 @@
                                                 </svg>
                                             </a>
                                         </li>
-                                        <li class=""><a href="#"
-                                                class="fw-normal fs-5 me-3">加入行程</a>
+                                        <li class=""><a href="#" class="fw-normal fs-5 me-3">加入行程</a>
                                         </li>
                                         <li class=""><a href="./explore-detail.html"
                                                 class="fw-medium fs-5 w-100">查看資訊</a></li>
@@ -522,7 +523,7 @@
                         </a>
                         <!-- 按下地圖內 地點價格按鈕 後的內容 -->
                         <div class="map-price-wrapper">
-                            <div class="map-price-content d-flex justify-content-center pt-6 pe-5 pb-5">
+                            <div class="d-flex justify-content-center pt-6 pe-5 pb-5">
                                 <div class="map-price-content-img me-4">
                                     <img src="../assets/images/pic/kyoto20.png" alt="kyoto20">
                                 </div>
@@ -561,7 +562,7 @@
                             </div>
                             <!-- 加入行程按鈕 -->
                             <div class="map-mode-add-schedule">
-                                <div class="py-3 px-4" style="margin-bottom: 34px;">
+                                <div class="py-3 px-4">
                                     <ul class="list-unstyled m-0 d-flex align-items-center">
                                         <li class="d-flex align-items-center">
                                             <a href="#" class="me-3 add-schedule-btn">
@@ -574,11 +575,10 @@
                                                 </svg>
                                             </a>
                                         </li>
-                                        <li class=""><a href="#"
-                                                class="fw-normal fs-5 me-3">加入行程</a>
+                                        <li class=""><a href="#" class="fw-normal fs-5 me-3">加入行程</a>
                                         </li>
-                                        <li class=""><a href="./accommodation-detail.html"
-                                                class="fs-5 w-100">查看資訊</a></li>
+                                        <li class=""><a href="./accommodation-detail.html" class="fs-5 w-100">查看資訊</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -625,25 +625,38 @@
         });
     </script>
     <script>
+        // 在點擊 地圖上價格按鈕後，價格按鈕變動顏色、並且出現下方內容、且滑動效果
+
         // 設置旅宿類的按鈕
         setupPriceDotButtons('.price-dot-btn', '.map-price-wrapper');
         // 設置探索類的按鈕
         setupPriceDotButtons('.explore-price-dot-btn', '.explore-map-price-wrapper');
-        // // 點擊地圖上價格點 a 連結，出現下方按鈕 + 添加 a 連結顏色
+
+        // 點擊地圖上價格點 a 連結，出現下方按鈕 + 添加 a 連結顏色
         function setupPriceDotButtons(buttonClass, wrapperClass) {
             document.querySelectorAll(buttonClass).forEach(button => {
                 button.addEventListener('click', (event) => {
                     event.preventDefault();
                     const wrapper = document.querySelector(wrapperClass);
                     const activeButton = document.querySelector(`${buttonClass}.price-dot-active`);
+
+                    // 移除之前的活動按鈕
                     if (activeButton && activeButton !== button) {
                         activeButton.classList.remove('price-dot-active');
                     }
+
+                    // 切換顯示和添加滑動效果
                     if (wrapper.style.display === 'none' || wrapper.style.display === '') {
-                        wrapper.style.display = 'block';
+                        wrapper.style.display = 'block'; // 先显示元素
+                        setTimeout(() => {
+                            wrapper.classList.add('slide'); // 添加滑动效果的类
+                        }, 10); // 确保在显示后再添加类
                         button.classList.add('price-dot-active');
                     } else {
-                        wrapper.style.display = 'none';
+                        wrapper.classList.remove('slide'); // 移除滑动效果的类
+                        setTimeout(() => {
+                            wrapper.style.display = 'none'; // 在动画结束后隐藏元素
+                        }, 300); // 300ms 与 CSS 动画时间一致
                         button.classList.remove('price-dot-active');
                     }
                 });
