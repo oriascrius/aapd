@@ -8,8 +8,8 @@
   <style>
 
   </style>
-  <script type="module" crossorigin src="/aapd/assets/main-83af7458.js"></script>
-  <link rel="stylesheet" href="/aapd/assets/main-e7cb5998.css">
+  <script type="module" crossorigin src="/aapd/assets/main-4b522f5b.js"></script>
+  <link rel="stylesheet" href="/aapd/assets/main-87cef11b.css">
 </head>
 <body class="p-0">
   <header class="checkout-header">
@@ -81,16 +81,11 @@
                 <p class="caption gray-500 m-0">每晚</p>
                 <p class="h4 primary-500 m-0">NT $1250</p>
               </div>
-              <div class="d-flex align-items-end">
+              <div class="button-group d-flex align-items-end">
                 <p class="gray-500 mb-0 me-5">數量</p>
-                <button type="button"
-                  class="btn rounded-circle btn-minus pb-4" id="decrement">
-                  - </button>
-                <input type="text" id="numberInput" class="form-control text-center border-0  p-0 py-2 pb-3" value="0"
-                  readonly style="width: 46px; background: #fff;">
-                <button type="button"
-                  class="btn rounded-circle btn-plus pb-3" id="increment"> +
-                </button>
+                <button type="button" class="btn rounded-circle btn-minus pb-4"> - </button>
+                <input type="text" class="number-input form-control text-center border-0 p-0 py-2 pb-3" value="0" readonly style="width: 46px; background: #fff;">
+                <button type="button" class="btn rounded-circle btn-plus pb-3"> + </button>
               </div>
             </div>
           </div>
@@ -133,16 +128,11 @@
                 <p class="caption gray-500 m-0">每晚</p>
                 <p class="h4 primary-500 m-0">NT $3550</p>
               </div>
-              <div class="d-flex align-items-end">
+              <div class="button-group d-flex align-items-end">
                 <p class="gray-500 mb-0 me-5">數量</p>
-                <button type="button"
-                  class="btn rounded-circle btn-minus pb-4" id="decrement2">
-                  - </button>
-                <input type="text" id="numberInput2" class="form-control text-center border-0 p-0 py-2 pb-3" value="0"
-                  readonly style="width: 46px; background: #fff;">
-                <button type="button"
-                  class="btn rounded-circle btn-plus pb-3" id="increment2">
-                  + </button>
+                <button type="button" class="btn rounded-circle btn-minus pb-4"> - </button>
+                <input type="text" class="number-input form-control text-center border-0 p-0 py-2 pb-3" value="0" readonly style="width: 46px; background: #fff;">
+                <button type="button" class="btn rounded-circle btn-plus pb-3"> + </button>
               </div>
             </div>
           </div>
@@ -185,16 +175,11 @@
                 <p class="caption gray-500 m-0">每晚</p>
                 <p class="h4 primary-500 m-0">NT $4250</p>
               </div>
-              <div class="d-flex align-items-end">
+              <div class="button-group d-flex align-items-end">
                 <p class="gray-500 mb-0 me-5">數量</p>
-                <button type="button"
-                  class="btn rounded-circle btn-minus pb-4" id="decrement3">
-                  - </button>
-                <input type="text" id="numberInput3" class="form-control text-center border-0 p-0 py-2 pb-3" value="0"
-                  readonly style="width: 46px; background: #fff;">
-                <button type="button"
-                  class="btn rounded-circle btn-plus pb-3" id="increment3">
-                  + </button>
+                <button type="button" class="btn rounded-circle btn-minus pb-4"> - </button>
+                <input type="text" class="number-input form-control text-center border-0 p-0 py-2 pb-3" value="0" readonly style="width: 46px; background: #fff;">
+                <button type="button" class="btn rounded-circle btn-plus pb-3"> + </button>
               </div>
             </div>
           </div>
@@ -216,52 +201,44 @@
 
   
   <script>
-    // 獲取元素
-    const incrementBtn = document.getElementById('increment');
-    const decrementBtn = document.getElementById('decrement');
-    const numberInput = document.getElementById('numberInput');
+// 選取所有的按鈕組
+const buttonGroups = document.querySelectorAll('.button-group');
 
-    const incrementBtn2 = document.getElementById('increment2');
-    const decrementBtn2 = document.getElementById('decrement2');
-    const numberInput2 = document.getElementById('numberInput2');
+buttonGroups.forEach(group => {
+  const incrementBtn = group.querySelector('.btn-plus');
+  const decrementBtn = group.querySelector('.btn-minus');
+  const numberInput = group.querySelector('.number-input');
 
-    const incrementBtn3 = document.getElementById('increment3');
-    const decrementBtn3 = document.getElementById('decrement3');
-    const numberInput3 = document.getElementById('numberInput3');
+  // 更新 btn-minus 的背景顏色
+  function updateDecrementButton() {
+    let currentValue = parseInt(numberInput.value);
+    if (currentValue === 0) {
+      decrementBtn.style.background = '#E1E1E1'; // 當數字為 0 時，設置背景顏色為灰色
+    } else {
+      decrementBtn.style.background = '#bdc2b3'; // 當數字大於 0 時，恢復背景顏色
+    }
+  }
 
-    // 增加數字
-    incrementBtn.addEventListener('click', () => {
-      let currentValue = parseInt(numberInput.value);
-      numberInput.value = currentValue + 1;
-    });
-    incrementBtn2.addEventListener('click', () => {
-      let currentValue2 = parseInt(numberInput2.value);
-      numberInput2.value = currentValue2 + 1;
-    });
-    incrementBtn3.addEventListener('click', () => {
-      let currentValue3 = parseInt(numberInput3.value);
-      numberInput3.value = currentValue3 + 1;
-    });
+  // 增加數字
+  incrementBtn.addEventListener('click', () => {
+    let currentValue = parseInt(numberInput.value);
+    numberInput.value = currentValue + 1;
+    updateDecrementButton(); // 每次更新後檢查按鈕狀態
+  });
 
-    // 減少數字
-    decrementBtn.addEventListener('click', () => {
-      let currentValue = parseInt(numberInput.value);
-      if (currentValue > 0) { // 確保不出現負數
-        numberInput.value = currentValue - 1;
-      }
-    });
-    decrementBtn2.addEventListener('click', () => {
-      let currentValue2 = parseInt(numberInput2.value);
-      if (currentValue2 > 0) { // 確保不出現負數
-        numberInput2.value = currentValue2 - 1;
-      }
-    });
-    decrementBtn3.addEventListener('click', () => {
-      let currentValue3 = parseInt(numberInput3.value);
-      if (currentValue3 > 0) { // 確保不出現負數
-        numberInput3.value = currentValue3 - 1;
-      }
-    });
+  // 減少數字
+  decrementBtn.addEventListener('click', () => {
+    let currentValue = parseInt(numberInput.value);
+    if (currentValue > 0) { // 確保不出現負數
+      numberInput.value = currentValue - 1;
+    }
+    updateDecrementButton(); // 每次更新後檢查按鈕狀態
+  });
+
+  // 初始化時檢查按鈕狀態
+  updateDecrementButton();
+});
+
   </script>
 </body>
 
