@@ -15,8 +15,8 @@
     <!-- 引入 jQuery UI CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <script type="module" crossorigin src="/aapd/assets/main-4b522f5b.js"></script>
-  <link rel="stylesheet" href="/aapd/assets/main-87cef11b.css">
+  <script type="module" crossorigin src="/aapd/assets/main-ece09574.js"></script>
+  <link rel="stylesheet" href="/aapd/assets/main-5be7f2ad.css">
 </head>
 
 <body class="mx-auto p-0" style="width: 375px;">
@@ -425,7 +425,7 @@
                 daysMin: ["S", "M", "T", "W", "T", "F", "S"],
                 months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-                today: "今天",
+                // today: "今天",
                 clear: "清除",
                 format: "yyyy-mm-dd",
                 // titleFormat: "yyyy年 MM月", /* 第一排年分 + 月份' */
@@ -450,32 +450,77 @@
     </script>
     <script>
         // 選擇完 日期 顯示在 tab 上
+        // $(function () {
+        //     let startDate = null; // 定义开始日期
+        //     let endDate = null; // 定义结束日期
+
+        //     $("#datepicker").on("changeDate", function (e) {
+        //         if (!startDate) {
+        //             startDate = e.date; // 选择开始日期
+        //             $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示开始日期
+        //         } else if (!endDate) {
+        //             if (e.date < startDate) {
+        //                 // 结束日期小于开始日期，重置选择
+        //                 startDate = e.date; // 重新选择开始日期
+        //                 endDate = null; // 清空结束日期
+        //                 $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示新的开始日期
+        //             } else {
+        //                 endDate = e.date; // 选择结束日期
+        //                 $("#selectedDateBtn").text(startDate.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' }) + " - " + e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示开始和结束日期
+        //             }
+        //         } else {
+        //             // 如果已经选择了两个日期，重置
+        //             startDate = e.date; // 重新选择开始日期
+        //             endDate = null; // 清空结束日期
+        //             $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示新的开始日期
+        //         }
+        //     });
+        // });
+
+        // 選擇完 日期 顯示在 tab 上
         $(function () {
             let startDate = null; // 定义开始日期
             let endDate = null; // 定义结束日期
 
             $("#datepicker").on("changeDate", function (e) {
+                console.log("日期选择事件触发"); // 确认事件被触发
+                console.log("e.date:", e.date); // 输出 e.date 的值
+
                 if (!startDate) {
                     startDate = e.date; // 选择开始日期
-                    $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示开始日期
+                    console.log("开始日期: A", startDate); // 输出开始日期为 A
+                    console.log("开始日期元素的类:", $("#selectedDateBtn").attr("class")); // 输出开始日期按钮的类
+                    $("#selectedDateBtn").text("A"); // 显示开始日期为 A
                 } else if (!endDate) {
                     if (e.date < startDate) {
                         // 结束日期小于开始日期，重置选择
                         startDate = e.date; // 重新选择开始日期
                         endDate = null; // 清空结束日期
-                        $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示新的开始日期
+                        console.log("重新选择开始日期: A", startDate); // 输出新的开始日期为 A
+                        console.log("开始日期元素的类:", $("#selectedDateBtn").attr("class")); // 输出开始日期按钮的类
+                        $("#selectedDateBtn").text("A"); // 显示新的开始日期为 A
                     } else {
                         endDate = e.date; // 选择结束日期
-                        $("#selectedDateBtn").text(startDate.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' }) + " - " + e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示开始和结束日期
+                        console.log("结束日期: B", endDate); // 输出结束日期为 B
+                        console.log("开始日期: A", startDate); // 输出开始日期为 A
+                        console.log("结束日期元素的类:", $("#selectedDateBtn").attr("class")); // 输出结束日期按钮的类
+                        $("#selectedDateBtn").text("A - B"); // 显示开始和结束日期为 A - B
                     }
                 } else {
                     // 如果已经选择了两个日期，重置
                     startDate = e.date; // 重新选择开始日期
                     endDate = null; // 清空结束日期
-                    $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示新的开始日期
+                    console.log("重新选择开始日期: A", startDate); // 输出新的开始日期为 A
+                    console.log("开始日期元素的类:", $("#selectedDateBtn").attr("class")); // 输出开始日期按钮的类
+                    $("#selectedDateBtn").text("A"); // 显示新的开始日期为 A
                 }
+
+                // 输出当前的开始和结束日期
+                console.log("当前开始日期: A", startDate);
+                console.log("当前结束日期: B", endDate);
             });
         });
+
     </script>
     <script>
         // 選擇完 價格 顯示在 tab 上
