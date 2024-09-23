@@ -6,6 +6,29 @@
 // }
 .bodyWrapper-all {
   width: 375px;
+  height: 812px;
+}
+
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: calc(100vw + 18px);
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  width: calc(100vw + 18px); /*瀏覽器滾動條的長度大約是 18px*/
+  overflow: auto;
 }
 
 img {
@@ -38,10 +61,7 @@ a {
     background-color: #e5e3dc;
     border: 1.5px solid #998f76;
   }
-  // 選項外圍
-  // .start-list {
-  //   padding-bottom: 118px;；
-  // }
+
   // 圓點分頁
   .start-pagination {
     padding-bottom: 24px;
@@ -95,7 +115,7 @@ a {
 // 当视口高度小于 812px 时
 @media (min-height: 812px) {
   .index-fixed-bottom {
-    position: absolute; /* 改为绝对定位 */
-    bottom: 40px; /* 贴合外框底部 */
+    position: absolute;
+    bottom: 40px;
   }
 }
