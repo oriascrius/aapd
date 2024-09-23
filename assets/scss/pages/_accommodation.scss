@@ -215,7 +215,7 @@ img {
 // 控制往下滑時，為你推薦、地圖按鈕會固定在上方
 .sticky-header-map {
   position: sticky;
-  top: 43px;
+  top: 42px;
   z-index: 1001;
   transition: background-color 0.1s ease;
 }
@@ -292,16 +292,35 @@ img {
     width: 100%;
   }
 }
-
-// 不能直接用background-image 改，只好照 f12 原本的貼上來改
-.datepicker table tr td.active.active {
-  background-image: linear-gradient(to bottom, #766a58, #766a58);
-  color: #f7f7f7;
+// 控制橫排給一定高度，要不然下方選中日期會跳來跳去
+.datepicker table tbody tr {
+  // background-color: #e5e3dc;
+  border-radius: 0;
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
 }
-// 日曆當天顏色
+.datepicker table tr td.active.active {
+  // 只寫 background-color 沒有用，這邊先把原本 background-image: linear-gradient
+  // 改成透明後，在另外設定  background-color、color
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ); /* 設置為透明 */
+  background-color: #766a58;
+  color: #f7f7f7;
+  width: 25px;
+  height: 24px;
+  line-height: 21px;
+  border-radius: 50%;
+  display: inline-block;
+}
+// 日曆當天顏色，設計稿不需要顯示今日顏色，所以把預設覆蓋掉
 .datepicker table tr td.today.day {
-  background-image: linear-gradient(to bottom, #919982, #919982);
-  color: #ffffff;
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  background-color: #ffffff;
+  color: #6a6a6a;
 }
 
 .table-condensed thead tr:nth-child(2) th {
@@ -326,28 +345,35 @@ img {
 .table-condensed thead tr:nth-child(3) th.dow {
   border-radius: 0;
 }
-// 日期整排控制不到，只好控制最左邊圓角
+// 日期 星期1~日 整排控制不到，只好控制最左邊圓角
 .table-condensed thead tr:nth-child(3) th:first-child {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-// 日期整排控制不到，只好控制最右邊圓角
+// 日期 星期1~日 整排控制不到，只好控制最右邊圓角
 .table-condensed thead tr:nth-child(3) th:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .table-condensed tbody {
   height: 158px;
 }
-.table-condensed tbody tr td.day {
-  border-radius: 50%; // 設置圓形
-
+.datepicker table tr td.day {
+  // background-color: #32c206;
+  border-radius: 0;
 }
 /* 隐藏不属于当前月份的日期 */
 .datepicker .old,
 .datepicker .new {
   visibility: hidden;
+}
+// 日期選中顏色 #766a58
+.selected-date {
+  background-color: #766a58;
+}
+// 日期中間顏色 #766a58
+.middle-date {
+  background-color: #e5e3dc;
 }
 
 // 一人獨旅按鈕向下推的內容

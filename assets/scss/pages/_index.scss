@@ -6,9 +6,8 @@
 // }
 .bodyWrapper-all {
   width: 375px;
-  height: 812px;
-  overflow: hidden;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -24,6 +23,7 @@ a {
 
 // index_1、index_2、index_3 使用背景插入圖片
 .start-background {
+  position: relative;
   background-image: url("../images/background-img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,9 +39,9 @@ a {
     border: 1.5px solid #998f76;
   }
   // 選項外圍
-  .start-list {
-    padding-bottom: 118px;
-  }
+  // .start-list {
+  //   padding-bottom: 118px;；
+  // }
   // 圓點分頁
   .start-pagination {
     padding-bottom: 24px;
@@ -82,4 +82,20 @@ a {
 // index_2、index_3
 .index_23-wrapper {
   padding-top: 137px;
+}
+
+.index-fixed-bottom {
+  position: fixed;
+  bottom: 6px;
+  z-index: 1030;
+  width: 343px; /* 减去左右内边距  375px - 32px */
+  max-height: 812px;
+  background-color: transparent;
+}
+// 当视口高度小于 812px 时
+@media (min-height: 812px) {
+  .index-fixed-bottom {
+    position: absolute; /* 改为绝对定位 */
+    bottom: 40px; /* 贴合外框底部 */
+  }
 }
