@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角效果示例</title>
+    <style>
+     .calendar {
+    position: relative; /* 确保伪元素相对于日历容器定位 */
+}
+
+.date {
+    display: inline-block; /* 使用 inline-block */
+    text-align: center; /* 文字居中对齐 */
+    padding: 10px; /* 上下内边距 */
+    background-color: #f0f0f0; /* 默认背景颜色 */
+    position: relative; /* 确保伪元素相对于日期元素定位 */
+}
+
+.highlighted {
+    background-color: #f0f0f0; /* 高亮背景颜色 */
+}
+
+.date:first-child::before,
+.date:last-child::after {
+    content: ''; /* 伪元素内容为空 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    height: 100%; /* 高度与父元素相同 */
+    background-color: #8b5a2b; /* 深色背景 */
+    z-index: -1; /* 确保在文本后面 */
+}
+
+.date:first-child::before {
+    left: -20px; /* 向左扩展 */
+    width: 20px; /* 根据需要调整宽度 */
+    border-radius: 50%; /* 圆角 */
+}
+
+.date:last-child::after {
+    right: -20px; /* 向右扩展 */
+    width: 20px; /* 根据需要调整宽度 */
+    border-radius: 50%; /* 圆角 */
+}
+    </style>
+</head>
+
+<body>
+    <div class="calendar">
+        <div class="date">8</div>
+        <div class="date highlighted">9</div>
+        <div class="date">10</div>
+    </div>
+   
+</body>
+
+</html>
