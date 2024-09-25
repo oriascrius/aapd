@@ -215,7 +215,7 @@ img {
 // 控制往下滑時，為你推薦、地圖按鈕會固定在上方
 .sticky-header-map {
   position: sticky;
-  top: 43px;
+  top: 42px;
   z-index: 1001;
   transition: background-color 0.1s ease;
 }
@@ -267,7 +267,9 @@ img {
   border: 1.5px solid #cdcabb;
   border-radius: 16px;
   padding: 8px 24px 20px 24px;
+  position: relative;
 }
+
 .datepicker-footer {
   border-radius: 32px;
   padding: 12px 32px;
@@ -292,16 +294,22 @@ img {
     width: 100%;
   }
 }
-
-// 不能直接用background-image 改，只好照 f12 原本的貼上來改
-.datepicker table tr td.active.active {
-  background-image: linear-gradient(to bottom, #766a58, #766a58);
-  color: #f7f7f7;
+// 控制橫排給一定高度，要不然下方選中日期會跳來跳去
+.datepicker table tbody tr {
+  // display: flex;
+  // justify-content: space-between; /* 平分左右空间 */
+  // border-radius: 0;
+  // text-align: center;
+  // height: 28px;
+  // line-height: 28px;
+  // width: 295px;
+  // white-space: nowrap; /* 强制不换行 */
 }
-// 日曆當天顏色
+// 日曆當天顏色，設計稿不需要顯示今日顏色，所以把預設覆蓋掉
 .datepicker table tr td.today.day {
-  background-image: linear-gradient(to bottom, #919982, #919982);
-  color: #ffffff;
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  background-color: #ffffff;
+  color: #6a6a6a;
 }
 
 .table-condensed thead tr:nth-child(2) th {
@@ -317,38 +325,137 @@ img {
   font-size: 14px;
   border-radius: 8px;
 }
+// 日期 星期1~日 增加 padding
 .datepicker th {
-  padding: 0;
-  width: 42px;
-  height: 28px;
+  padding: 4px 16px 4px 16px;
 }
 // 日期整排
 .table-condensed thead tr:nth-child(3) th.dow {
   border-radius: 0;
 }
-// 日期整排控制不到，只好控制最左邊圓角
+// 日期 星期1~日 整排控制不到，只好控制最左邊圓角
 .table-condensed thead tr:nth-child(3) th:first-child {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-// 日期整排控制不到，只好控制最右邊圓角
+// 日期 星期1~日 整排控制不到，只好控制最右邊圓角
 .table-condensed thead tr:nth-child(3) th:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .table-condensed tbody {
   height: 158px;
 }
-.table-condensed tbody tr td.day {
-  border-radius: 50%; // 設置圓形
-
+.datepicker table tr td.day {
+  border-radius: 0;
 }
 /* 隐藏不属于当前月份的日期 */
 .datepicker .old,
 .datepicker .new {
   visibility: hidden;
 }
+
+/* 中间日期的高亮样式 */
+// .datepicker tbody tr td.day.highlight-date {
+//   background-color: #e5e3dc;
+//   color: #969696;
+// }
+// .datepicker tbody tr td.day.first-highlight {
+//   border-top-left-radius: 20px; /* 左侧圆角 */
+//   border-bottom-left-radius: 20px; /* 左侧圆角 */
+// }
+
+// .datepicker tbody tr td.day.last-highlight {
+//   border-top-right-radius: 20px; /* 右侧圆角 */
+//   border-bottom-right-radius: 20px; /* 右侧圆角 */
+// }
+
+/* 开始日期的样式 */
+// .datepicker tbody tr td.day.start-date {
+//   background-color: #766a58;
+//   color: #f7f7f7;
+//   width: 25px;
+//   height: 24px;
+//   line-height: 21px;
+//   border-radius: 50%;
+//   display: inline-block;
+// }
+
+/* 结束日期的样式 */
+// 直接修改 .end-date 會無法修改，可能內建日曆本身設定好了，只能用 !important 強力覆蓋
+// 但這裡在往上一層找到父層.day，或許就能再修改樣式，這裡本來找到 .day 就能修改
+// 但圓角無法修改，我改成最外父層都選取圓角才能修改
+// .datepicker tbody tr td.day.end-date {
+//   background-color: #766a58;
+//   color: #f7f7f7;
+//   width: 25px;
+//   height: 24px;
+//   line-height: 21px;
+//   border-radius: 50%;
+//   display: inline-block;
+// }
+
+// 日曆 JS 搭配 CSS 設定
+
+// 為開始、中間、結束，統一設定一個樣式 class
+// unified-class 相對定位當底，因為我這邊用 偽元素、絕對定位 疊加上去樣式
+// 設定 開始 ~ 結束 日期一整排的樣式
+// 只寫 .unified-class 有些會讀不到
+.datepicker tbody tr td.day.unified-class {
+  position: relative;
+}
+
+// 設定 開始 ~ 結束 日期一整排的樣式
+// 這裡不跟上面寫一起是因為，JS判斷點第一個開始日期時，不添加底部樣式
+.datepicker tbody tr td.day.unified-color-class {
+  background-color: #e5e3dc;
+  color: #969696;
+}
+// 設定 開始 ~ 結束 日期一整排的樣式
+// 控制最左邊圓角
+.datepicker tbody tr td.day.unified-class.first-highlight {
+  border-top-left-radius: 20px; /* 左侧圆角 */
+  border-bottom-left-radius: 20px; /* 左侧圆角 */
+}
+// 設定 開始 ~ 結束 日期一整排的樣式
+// 控制最右邊圓角
+.datepicker tbody tr td.day.unified-class.last-highlight {
+  border-top-right-radius: 20px; /* 右侧圆角 */
+  border-bottom-right-radius: 20px; /* 右侧圆角 */
+}
+
+// 開始日期，偽元素覆蓋樣式
+.datepicker tbody tr td.day.start-date::before{
+  content: var(--pseudo-content);
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 1040;
+  background-color: #766a58;
+  color: #f7f7f7;
+  // width: 25px;
+  width: 25px;
+  height: 23px;
+  line-height: 21px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+// 結束日期，偽元素覆蓋樣式
+.datepicker tbody tr td.day.end-date::before {
+  content: var(--pseudo-content);
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 1040;
+  background-color: #766a58;
+  color: #f7f7f7;
+  width: 25px;
+  height: 23px;
+  line-height: 21px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
 
 // 一人獨旅按鈕向下推的內容
 .cardTraveling {

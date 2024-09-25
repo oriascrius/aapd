@@ -66,10 +66,19 @@
   display: none;
   background-color: #ffffff;
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   width: 375px;
   border-radius: 24px 24px 0px 0px;
   box-shadow: 3px -3px 7.5px 0px #0000001a;
+  transform: translateY(100%); /* 初始位置在下方 */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
+  opacity: 0; /* 初始透明度为0 */
+}
+// 滑動出來效果
+.explore-map-price-wrapper.slide {
+  display: block; /* 添加 active 类时显示 */
+  transform: translateY(0); /* 移动到原位置 */
+  opacity: 1; /* 透明度变为1 */
 }
 // ==================================== 探索頁 ====================================
 
@@ -97,10 +106,19 @@
   display: none;
   background-color: #ffffff;
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   width: 375px;
   border-radius: 24px 24px 0px 0px;
   box-shadow: 3px -3px 7.5px 0px #0000001a;
+  transform: translateY(100%); /* 初始位置在下方 */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
+  opacity: 0; /* 初始透明度为0 */
+}
+// 滑動出來效果
+.map-price-wrapper.slide {
+  display: block; /* 添加 active 类时显示 */
+  transform: translateY(0); /* 移动到原位置 */
+  opacity: 1; /* 透明度变为1 */
 }
 // ==================================== 旅宿頁 ====================================
 
@@ -114,7 +132,7 @@
 }
 .map-mode-add-schedule {
   position: absolute;
-  bottom: -97px;
+  bottom: -64px;
   background-color: #ffffff;
   .add-schedule-btn {
     background-color: $secondary-200;

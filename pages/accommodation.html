@@ -327,7 +327,7 @@
                     </a>
                     <div class="d-flex justify-content-between align-items-center text-primary-400">
                         <h3 class="fw-bold text-gray-600 fs-3 mb-2 text-truncate" style="width: 219px;">
-                            一人成行-海之京都</h3>
+                            下京區 佐藤是町屋</h3>
                         <div class="d-flex align-items-center mb-2">
                             <svg width="20" height="20" viewBox="0 0 24 25" fill="none" class="pe-1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -416,6 +416,8 @@
     </script>
     <script>
         $(function () {
+            var startDate, endDate;
+
             // 自定义语言设置
             $.fn.datepicker.dates['custom'] = {
                 days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
@@ -423,56 +425,128 @@
                 daysMin: ["S", "M", "T", "W", "T", "F", "S"],
                 months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-                today: "今天",
                 clear: "清除",
                 format: "yyyy-mm-dd",
-                // titleFormat: "yyyy年 MM月", /* 第一排年分 + 月份' */
                 titleFormat: "MM",
-                weekStart: 0 // 设置星期一为一周的开始
+                weekStart: 0
             };
 
-            // 初始化日期選擇器
-            $("#datepicker").datepicker({
-                format: "mm-dd",
+            // 初始化日期选择器
+            $('#datepicker').datepicker({
+                format: "yyyy-mm-dd",
                 autoclose: true,
                 todayHighlight: true,
-                language: "custom" // 使用上面自定义语言设置
-            });
-
-            // 切換日曆顯示
-            $(".datepicker-toggle").on("click", function (e) {
-                e.preventDefault();
-                $("#datepicker").datepicker("show");
-            });
-        });
-    </script>
-    <script>
-        // 選擇完 日期 顯示在 tab 上
-        $(function () {
-            let startDate = null; // 定义开始日期
-            let endDate = null; // 定义结束日期
-
-            $("#datepicker").on("changeDate", function (e) {
-                if (!startDate) {
-                    startDate = e.date; // 选择开始日期
-                    $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示开始日期
-                } else if (!endDate) {
-                    if (e.date < startDate) {
-                        // 结束日期小于开始日期，重置选择
-                        startDate = e.date; // 重新选择开始日期
-                        endDate = null; // 清空结束日期
-                        $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示新的开始日期
-                    } else {
-                        endDate = e.date; // 选择结束日期
-                        $("#selectedDateBtn").text(startDate.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' }) + " - " + e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示开始和结束日期
+                language: "custom",
+                inputs: null,
+                beforeShowDay: function (date) {
+                    if (startDate && endDate) {
+                        // 高亮中间日期
+                        if (date > startDate && date < endDate) {
+                            return { classes: 'unified-class unified-color-class' };
+                        }
+                        // 高亮开始日期
+                        if (date.getTime() === startDate.getTime()) {
+                            return { classes: 'unified-class first-highlight start-date unified-color-class' };
+                        }
+                        // 高亮结束日期
+                        if (date.getTime() === endDate.getTime()) {
+                            return { classes: 'unified-class last-highlight end-date unified-color-class' };
+                        }
+                    } else if (startDate && date.getTime() === startDate.getTime()) {
+                        // 当只有开始日期时，立即应用样式
+                        return { classes: 'unified-class start-date' };
                     }
-                } else {
-                    // 如果已经选择了两个日期，重置
-                    startDate = e.date; // 重新选择开始日期
-                    endDate = null; // 清空结束日期
-                    $("#selectedDateBtn").text(e.date.toLocaleDateString("zh-TW", { month: '2-digit', day: '2-digit' })); // 显示新的开始日期
+                    return {};
                 }
+            }).on('changeDate', function (e) {
+                if (!startDate || endDate) {
+                    // 如果未选择开始日期或已经选择了结束日期，设置新的开始日期
+                    startDate = e.date;
+                    endDate = null;
+
+                    // 设置开始日期后立即更新显示样式
+                    $('#datepicker').datepicker('update');
+                } else if (!endDate) {
+                    // 如果已经选择了开始日期
+                    if (e.date <= startDate) {
+                        // 重置开始日期和结束日期
+                        startDate = null;
+                        endDate = null;
+
+                        // 清空日期选择器
+                        $('#datepicker').datepicker('clearDates');
+                        $('#selectedDateBtn').text('MM/DD - MM/DD');
+                    } else {
+                        // 设置结束日期
+                        endDate = e.date;
+                    }
+                }
+
+                // 更新a标签的内容，只显示月/日 - 月/日
+                if (startDate && endDate) {
+                    $('#selectedDateBtn').text(formatDateWithoutYear(startDate) + ' - ' + formatDateWithoutYear(endDate));
+                } else if (startDate) {
+                    $('#selectedDateBtn').text(formatDateWithoutYear(startDate));
+                }
+
+                // 重新渲染日期选择器以应用高亮
+                $('#datepicker').datepicker('update');
+
+                // 更新高亮类
+                updateHighlightClasses();
             });
+
+            // 格式化日期为 月/日 格式
+            function formatDateWithoutYear(date) {
+                var d = new Date(date),
+                    month = '' + (d.getMonth() + 1),
+                    day = '' + d.getDate();
+
+                if (month.length < 2) month = '0' + month;
+                if (day.length < 2) day = '0' + day;
+
+                return [month, day].join('/');
+            }
+
+            // 更新高亮类
+            function updateHighlightClasses() {
+                // 获取所有带有unified-class的天数
+                const highlightedDays = document.querySelectorAll('.unified-class');
+
+                // 清除之前的伪元素
+                highlightedDays.forEach(day => {
+                    day.style.setProperty('--pseudo-content', '""'); // 重置伪元素
+                });
+
+                if (startDate) {
+                    // 设置开始日期的伪元素内容
+                    var startDayElement = findDayElement(startDate);
+                    if (startDayElement) {
+                        updatePseudoElementContent(startDayElement, startDate.getDate());
+                    }
+                }
+
+                if (endDate) {
+                    // 设置结束日期的伪元素内容
+                    var endDayElement = findDayElement(endDate);
+                    if (endDayElement) {
+                        updatePseudoElementContent(endDayElement, endDate.getDate());
+                    }
+                }
+            }
+
+            // 通过日期查找对应的单元格元素，支持跨月日期
+            function findDayElement(date) {
+                var day = date.getDate();
+                return $('#datepicker').find('.day').filter(function () {
+                    return $(this).text() == day && !$(this).hasClass('old') && !$(this).hasClass('new');
+                })[0];
+            }
+
+            // 更新伪元素的内容
+            function updatePseudoElementContent(element, content) {
+                $(element).css('--pseudo-content', `"${content}"`);  // 使用CSS变量存储伪元素内容
+            }
         });
     </script>
     <script>
