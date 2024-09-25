@@ -26,22 +26,35 @@
 }
 
 .btn-hr {
-  height: 50%;
+  height: 32px;
   margin-top: auto;
   margin-bottom: auto;
   border-left: 1px solid #CDCABB;
 }
 
 .track {
+  
+  
+  
+}
+
+
+.personal-track {
+  display: block;
   color: #AFAFAF;
   border-bottom: 2px solid #AFAFAF;
 }
 
-.track:hover {
+.personal-track:hover {
   color: #766A58;
-
   border-bottom: 2px solid #766A58;
 }
+
+.personal-track:focus {
+  color: #766A58;
+  border-bottom: 2px solid #766A58;
+}
+
 
 .personal-date {
   font-size: 12px;

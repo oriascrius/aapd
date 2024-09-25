@@ -24,7 +24,6 @@ a {
 
 .form-control::placeholder {
   color: #998F76;
-  font-weight: bold;
 }
 
 .btn:hover {
@@ -55,6 +54,20 @@ a {
 }
 
 
+
+
+
+.slide-2 {
+  width: 84px;
+  height: 99px;
+}
+
+
+
+
+
+
+
 .bookmark-fill:hover {
   fill: #FFFFFF;
 }
@@ -72,15 +85,21 @@ a {
 }
 
 .tour-img {
-  max-height: 240px;
-
+  height: 180px;
+  width: 286px;
   object-fit: cover;
   object-position: 50% 25%;
 }
 
 .tour-img-2 {
-  max-height: 240px;
+  height: 180px;
 
   object-fit: cover;
   object-position: 50% 50%;
+}
+
+
+
+.search-fz-12 {
+  font-size: 12px;
 }
