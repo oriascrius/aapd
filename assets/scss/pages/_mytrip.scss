@@ -7,7 +7,31 @@
   padding-bottom: 10%;
 }
 
-.trip-center {
-  padding-top: 50%;
-  padding-bottom: 10%;
+
+
+
+
+.mytrip-track {
+  display: block;
+  color: #AFAFAF;
+  border-bottom: 2px solid #AFAFAF;
+}
+
+
+
+.mytrip-track:hover {
+  color: #766A58;
+  border-bottom: 2px solid #766A58;
+}
+
+
+
+.mytrip-track:focus {
+  color: #766A58;
+  border-bottom: 2px solid #766A58;
+}
+
+
+.box {
+  height: 10vh;
 }
