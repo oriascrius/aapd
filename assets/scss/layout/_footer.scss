@@ -20,9 +20,7 @@
   fill: #524941;
 }
 
-.footer-bed:hover {
-  content: url('/assets/images/icon/bed.svg');
-}
+
 
 .footer-globe:hover {
   content: url('/assets/images/icon/globe.svg');
@@ -30,4 +28,61 @@
 
 .footer-user:hover {
   content: url('/assets/images/icon/user.svg');
+}
+
+
+.social-explore {
+  width: 24px;
+  height: 25px;
+}
+
+.social-explore:hover {
+  content: url('/assets/images/icon/explore-hover.svg');
+}
+
+
+
+
+.footer-explore {
+  width: 25px;
+}
+
+
+
+
+.footer-explore:hover {
+  content: url('/assets/images/icon/explore-hover.svg');
+  width: 25px;
+  
+}
+
+
+ input[type="checkbox"] {
+  display: none;
+}
+
+
+
+
+
+input[type="checkbox"]:checked + label {
+  content: url('/assets/images/icon/bed.svg');
+}
+
+
+.footer-bed {
+  cursor: pointer;
+}
+
+.footer-bed:hover {
+  content: url('/assets/images/icon/bed.svg');
+}
+
+
+.a-block {
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+  top: 30%;
+  right: 40%;
 }
