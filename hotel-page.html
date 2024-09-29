@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌟𝓐-𝓐-𝓟-𝓓🌠－Hotel-page</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌟𝓐-𝓐-𝓟-𝓓🌠－Hotel-page</title>
+    <!----- Google Icon ----->
 
-  <!----- Google Icon ----->
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
 
-  <!----- Swiper ----->
+    <!----- Swiper ----->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -31,12 +30,8 @@
         <div class="d-flex align-items-center justify-content-between w-100 mb-3">
           <a class="navbar-brand text-primary-600 fs-5 fw-bold header-explor m-0" href="#">旅宿</a>
           <a href="#"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M18 8.5C18 6.9087 17.3679 5.38258 16.2426 4.25736C15.1174 3.13214 13.5913 2.5 12 2.5C10.4087 2.5 8.88258 3.13214 7.75736 4.25736C6.63214 5.38258 6 6.9087 6 8.5C6 15.5 3 17.5 3 17.5H21C21 17.5 18 15.5 18 8.5Z"
-                stroke="#766A58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M13.73 20.5C13.5542 20.8031 13.3019 21.0547 12.9982 21.2295C12.6946 21.4044 12.3504 21.4965 12 21.4965C11.6496 21.4965 11.3054 21.4044 11.0018 21.2295C10.6982 21.0547 10.4458 20.8031 10.27 20.5"
-                stroke="#766A58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M18 8.5C18 6.9087 17.3679 5.38258 16.2426 4.25736C15.1174 3.13214 13.5913 2.5 12 2.5C10.4087 2.5 8.88258 3.13214 7.75736 4.25736C6.63214 5.38258 6 6.9087 6 8.5C6 15.5 3 17.5 3 17.5H21C21 17.5 18 15.5 18 8.5Z" stroke="#766A58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.73 20.5C13.5542 20.8031 13.3019 21.0547 12.9982 21.2295C12.6946 21.4044 12.3504 21.4965 12 21.4965C11.6496 21.4965 11.3054 21.4044 11.0018 21.2295C10.6982 21.0547 10.4458 20.8031 10.27 20.5" stroke="#766A58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg></a>
         </div>
 
@@ -48,8 +43,7 @@
               </svg>
           </a>
 
-          <input class="form-control p-0 border-0 text-primary-400" type="search" placeholder="搜尋心目中的京都旅宿"
-            aria-label="Search">
+          <input class="form-control p-0 border-0 text-primary-400" type="search" placeholder="搜尋心目中的京都旅宿" aria-label="Search">
         </form>
       </div>
     </nav>
@@ -78,7 +72,7 @@
             </svg>1人獨旅
           </button>
         </div>
-        
+      
         <div class="col">
           <button type="button" class="btn btn-outline-primary-500 rounded-4 w-100" data-bs-toggle="collapse" data-bs-target="#buget">
             <svg class="align-bottom me-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,55 +85,96 @@
     </div>
 
 
-    <div class="swiper hotel-swiper ps-5 my-3">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#">
-              <div class="text-center py-3">
-                <img class="w-100 mb-3 px-5" src="/aapd/assets/Feature icon - Discount-a168e7ec.svg" alt="Discount-icon">
+
+
+
+    <div id="apple">
+
+      <div class="collapse bg-white rounded-4 py-4 px-3 border border-2" id="calendarDropdown" data-parent="#apple">
+
+        <div id="datepicker"></div>
+        <div class="datepicker-footer">
+          <a href="#" class="fw-medium fs-5">搜尋</a>
+        </div>
+      </div>
   
-                <p class="text-primary-50 fw-bold m-0">獨家折扣</p>
-              </div>
-            </a>
-          </div>
+      <div class="collapse bg-white rounded-4" id="people"  data-parent="#apple">
+
+        <div class="cardTraveling m-0">
+          <ul class="list-unstyled m-0 text-center">
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn" data-value="1 人獨旅">1 人獨旅</li>
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                  data-value="2  -  4">
+                  2 <span class="mx-2"></span> 4
+              </li>
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                  data-value="6  -  8">
+                  6 <span class="mx-2"></span> 8
+              </li>
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn" data-value="10 人團旅">10 人團旅</li>
+              <li class="datepicker-footer"><a href="#" class="fw-medium fs-5">搜尋</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collapse bg-white rounded-4" id="buget" data-parent="#apple">
+
+        <div class="cardTraveling m-0">
+          <ul class="list-unstyled m-0 text-center">
+            <li class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                data-value="$ 2 K - 4 K">
+                $ 2 K <span class="mx-2"></span> $ 4 K
+            </li>
+            <li class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                data-value="$ 5 K - 1 W">
+                $ 5 K <span class="mx-2"></span> $ 1 W
+            </li>
+            <li class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                data-value="$ 2 W - 4 W">
+                $ 2 W <span class="mx-2"></span> $ 4 W
+            </li>
+            <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn">自定義</li>
+            <li class="datepicker-footer"><a href="#" class="fw-medium fs-5">搜尋</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper hotel-swiper ps-5 my-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="/aapd/assets/Feature tab (3)-0b198c1b.png" alt="food-img">
+          </a>
         </div>
 
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#">
-              <div class="d-flex flex-column align-items-center justify-content-between pt-5">
-                <img class="w-100 mb-4 px-6" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAlCAYAAAAqXEs9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATLSURBVHgBxVgBUupIEO2ZiFUoiDnB8m+AJ1i8gXuCjycQTyCeQP4JxBN8b6A30BvgniAQEqiFn5ntN8lYYwiQwG79VxWJ6Z6ZznT3654IOhCLWdBVJLu4X/5SI9/3P/I6QRC0j49kL/98k/7emM+jmziaavdaxLO7vF4Uhr28nrlm00FeV9Ie4Dc+j6PwUatkKAS9S099w8X3H0qrQRyHj9BZW0yry9NGS0B309yVDTLbfyzfiHRPa/WjfqIu63X/A9fJaeub0vSDtO5BB7pUEZUMWiyi77UaG6PpXJO6bjT9vhD+xNVpNlt9lt1C55h159G0TxVwVFYxDMMrlSQjyW4RMt0VPIdrjmveAwkO0mVyy0E6aTT84WIRPGslX7SmB+HpdzawFErvUK2WvAtJfXbRhWPMp/vyboLOP0t1oRU9sTEdPFvxrtGh4Gwo3Ha4L4qmAcuDKAr6uOLs/7z+bBYMTFbF03EcBle8e+1NWbYRNkt4oQ4mcGXzaPaACee8gCvDPZ4Z2Xz24I7BPFaGDC1tELZ8HoUvhlNyhkDGb/kGWRQGI63XUxsvEoXTkd0RN9OMwdncpQwC68b2LXib87LMRRruoR3Iu2mTDDtXOIHDugEP6LqymNnXumjjBAVw3ZRn8JCNLJQZ1o3Dn9mCb66bILNbHM0mr0Uu2gXXTfhdc6H1iGV33KQLBsMvE21x3z7Y5iYrg8Fko95V2Oa+Q7DRTYQCnCZCSowifVhQNC+aTf81PzEmswFu3eBmJ2T5tAfOzvxnsHxRERaeMFwuMIkm3RUkXhXpDttmFFCRLSO7AAdxreLCSk/SozGzcN9WBZH+GapfdMGs/l1IOTw5ad6uvRDHjkrkOBv0wXOgHrIbxUhAmKzkgISGXydSSA0DiwwypaImx9ITvXr97MmZnMsHnbtjZswxXPfulivlo74VGWQ2QSvfFGuhR40GDfPGE8iqiBTTRTjQC2SmdOSTIisPi4IY3FY6Sld7gH1v3jRJvhZJVPe8LnQEVUelfmi1Yn8bt3p3u3SF8G4QvPWCpPjPDEIsJEpda62vinpnCzA72hEhxYAqonILi9TlQLxH2hYZlRqjBnzd28CvgkoxZMHcNOAAxy0nQNherhKT2qZz1KoHY05Zh/bAXgZZo5h53z0pH5kKOoaEtG5nvfaI9sRexyALuA9szsGLjELjf8kZN6IDsGaQ8GQLvx55fxadrfIAEZqmn3ttNuZ9lz7mTJaU9kdS/LFNsf1Z3e1V0FwdAqcP/7KG25JIawyfGF5A4cgglADEgiE2KX8W9TJlwWM6tuhmxyhQx188/wXWMOc3XvuzyOJPFIU9QfrRrVHpG7EByrvTiA+tu8Y+IZ6pAhLmLOGOk8m9WyNRjrh+vrDO7UmjNRTu7vC52980MZoqQaaIVsamzsECfRdvzWS5VJeUbWepRoz1xtk5bGdfDVeZGORrl25WtAPYIuBb9CGnjbPrXQPR8R158oE/KCDNJ9t04WbEC8pHGcaOZlM0hTeGGDk+plQC4B1uGTo88I7H/M2+DzZrc8xpKl0+2PAWG0KfLkNK7hrknlC2cVTaCpfPzEXWZ+FkYzrG7CvFzoH/J0T2VcWkvWljE+oKLdv0GyA8Cup19YRvTf8CLeHHQ6mLMmUAAAAASUVORK5CYII=" alt="popular-icon">
-                  
-                <p class="text-white fw-bold m-0 pt-1">熱門住宿</p>
-              </div>
-            </a>
-          </div>
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="/aapd/assets/Feature tab (2)-32f3a999.png" alt="outdoor-img">
+          </a>
         </div>
         
 
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#"> 
-              <div class="text-center pt-3">
-                <img class="w-100 mb-3 px-5" src="/aapd/assets/Feature icon - Machiya-404e1059.svg" alt="Machiya-icon">
-  
-                <p class="text-white fw-bold m-0">日式町屋</p>
-              </div>
-            </a>
-          </div>
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="/aapd/assets/Feature tab-7a16b460.png" alt="handmade-img">
+          </a>
         </div>
 
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#"> 
-              <div class="text-center pt-3">
-                <img class="w-100 mb-3 px-5" src="/aapd/assets/Feature icon - Onsen-f8b56455.svg" alt="Onsen-icon">
-  
-                <p class="text-white fw-bold m-0">溫泉旅館</p>
-              </div>
-            </a>
-          </div>
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="/aapd/assets/Feature tab (1)-b6aad828.png" alt="store-img">
+          </a>
         </div>
       </div>
     </div>
@@ -160,34 +195,27 @@
             <div class="d-flex justify-content-between align-items-center p-4 w-286 position-absolute z-3">
               <p class="py-2 px-5 m-0 text-white bg-primary-500 rounded hotel-fz-12"><a href="#">特別優惠</a></p>
 
-              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
-                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z" stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg></a>
             </div>
 
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/aapd/assets/kyoto12-b70edda9.png" class="card-img-top rounded hotel-img" alt="house"></a>
+              <a href="#"><img src="/aapd/assets/kyoto12-b70edda9.png" class="card-img-top rounded-4 hotel-img" alt="house"></a>
               
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between mt-4 mb-3">
                   <p class="card-text mb-0 text-gray-600 fs-3 fw-bold text-hidden"><a href="#">京町家老宅</a></p>
-
+                  
                   <div class="d-flex align-items-center justify-content-between ms-3">
-                    <a href="#"><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
-                          fill="#998F76" />
-                      </svg></a>
+                    <a href="#"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z" fill="#998F76"/>
+                    </svg></a>
 
-                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.6<span
-                          class="card-rate hotel-fz-12">(112)</span></a></p>
+                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.6<span class="card-rate hotel-fz-12">(112)</span></a></p>
                   </div>
                 </div>
-
+                
                 <h3 class="text-primary-500 fs-4">TWD 1,999 起</h3>
               </div>
             </div>
@@ -197,34 +225,27 @@
             <div class="d-flex justify-content-between align-items-center p-4 w-100 position-absolute z-3">
               <p class="py-2 px-5 m-0 text-white bg-primary-500 rounded hotel-fz-12"><a href="#">特別優惠</a></p>
 
-              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
-                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z" stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg></a>
             </div>
-
+            
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/aapd/assets/kyoto11-52fd67f5.png" class="card-img-top rounded hotel-img" alt="house"></a>
+              <a href="#"><img src="/aapd/assets/kyoto11-52fd67f5.png" class="card-img-top rounded-4 hotel-img" alt="house"></a>
 
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
                   <p class="card-text mb-0 text-gray-600 fs-3 fw-bold text-hidden"><a href="#">下京區 佐藤室町屋</a></p>
-
+                  
                   <div class="d-flex align-items-center justify-content-between ms-3">
-                    <a href="#"><svg class="w-100" width="24" height="25" viewBox="0 0 24 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
-                          fill="#998F76" />
-                      </svg></a>
+                    <a href="#"><svg class="w-100" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z" fill="#998F76"/>
+                    </svg></a>
 
-                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.6<span
-                          class="card-rate hotel-fz-12">(112)</span></a></p>
+                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.6<span class="card-rate hotel-fz-12">(112)</span></a></p>
                   </div>
                 </div>
-
+                
                 <h3 class="text-primary-500 fs-4">TWD 1,999 起</h3>
               </div>
             </div>
@@ -243,34 +264,27 @@
             <div class="d-flex justify-content-between align-items-center p-4 w-100 position-absolute z-3">
               <p class="py-2 px-5 m-0 text-white bg-primary-500 rounded hotel-fz-12"><a href="#">特別優惠</a></p>
 
-              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
-                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z" stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg></a>
             </div>
 
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/aapd/assets/kyoto 20-5c74b498.png" class="w-100 rounded hotel-tour-img" alt="house"></a>
+              <a href="#"><img src="/aapd/assets/kyoto 20-5c74b498.png" class="w-100 rounded-4 hotel-tour-img" alt="house"></a>
 
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between mt-4 mb-3">
                   <p class="card-text mb-0 text-gray-600 fs-3 fw-bold text-hidden"><a href="#">吉村屋町家 四条大宮</a></p>
-
+                  
                   <div class="d-flex align-items-center justify-content-between ms-3">
-                    <a href="#"><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
-                          fill="#998F76" />
-                      </svg></a>
+                    <a href="#"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z" fill="#998F76"/>
+                    </svg></a>
 
-                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.7<span
-                          class="card-rate hotel-fz-12">(101)</span></a></p>
+                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.7<span class="card-rate hotel-fz-12">(101)</span></a></p>
                   </div>
                 </div>
-
+                
                 <h3 class="text-primary-500 fs-4">TWD 2,300 起</h3>
               </div>
             </div>
@@ -280,34 +294,27 @@
             <div class="d-flex justify-content-between align-items-center p-4 w-100 position-absolute z-3">
               <p class="py-2 px-5 m-0 text-white bg-primary-500 rounded hotel-fz-12"><a href="#">特別優惠</a></p>
 
-              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z"
-                    stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="#"><svg class="bookmark-fill" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 21.2143L12.5 16.5714L6 21.2143V6.35714C6 5.8646 6.19566 5.39223 6.54394 5.04394C6.89223 4.69566 7.3646 4.5 7.85714 4.5H17.1429C17.6354 4.5 18.1078 4.69566 18.4561 5.04394C18.8043 5.39223 19 5.8646 19 6.35714V21.2143Z" stroke="#FFFFFF" stroke-width="1.85714" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg></a>
             </div>
 
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/aapd/assets/kyoto13-9c4e5de0.png" class="card-img-top rounded tour-img-2" alt="house"></a>
+              <a href="#"><img src="/aapd/assets/kyoto13-9c4e5de0.png" class="card-img-top rounded-4 tour-img-2" alt="house"></a>
 
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
                   <p class="card-text mb-0 text-gray-600 fs-3 fw-bold text-hidden"><a href="#">私人獨棟京町家 四条大宮</a></p>
-
+                  
                   <div class="d-flex align-items-center justify-content-between ms-3">
-                    <a href="#"><svg class="w-100" width="24" height="25" viewBox="0 0 24 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z"
-                          fill="#998F76" />
-                      </svg></a>
+                    <a href="#"><svg class="w-100" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.0489 3.42705C11.3483 2.50574 12.6517 2.50574 12.9511 3.42705L14.4697 8.10081C14.6035 8.51284 14.9875 8.7918 15.4207 8.7918H20.335C21.3037 8.7918 21.7065 10.0314 20.9228 10.6008L16.947 13.4894C16.5966 13.744 16.4499 14.1954 16.5838 14.6074L18.1024 19.2812C18.4017 20.2025 17.3472 20.9686 16.5635 20.3992L12.5878 17.5106C12.2373 17.256 11.7627 17.256 11.4122 17.5106L7.43648 20.3992C6.65276 20.9686 5.59828 20.2025 5.89763 19.2812L7.41623 14.6074C7.55011 14.1954 7.40345 13.744 7.05296 13.4894L3.07722 10.6008C2.29351 10.0314 2.69628 8.7918 3.66501 8.7918H8.57929C9.01252 8.7918 9.39647 8.51284 9.53035 8.10081L11.0489 3.42705Z" fill="#998F76"/>
+                    </svg></a>
 
-                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.6<span
-                          class="card-rate hotel-fz-12">(112)</span></a></p>
+                    <p class="m-0 text-primary-400"><a class="d-flex align-items-center" href="#">4.6<span class="card-rate hotel-fz-12">(112)</span></a></p>
                   </div>
                 </div>
-
+                
                 <h3 class="text-primary-500 fs-4">TWD 3,999 起</h3>
               </div>
             </div>
@@ -350,29 +357,52 @@
     </div>
   </div>
 </div>
-      
+    
 
 
-      <!----- Swiper JS ----->
+    <!----- Swiper JS ----->
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: "auto",
-          spaceBetween: 10,
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".hotel-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+      });
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+    <script>
+      $(document).ready(function(){
+        // 初始化日期選擇器
+        $('#datepicker').datepicker({
+          format: 'yyyy-mm-dd',
+          autoclose: true
         });
-      </script>
+      });
+    </script>
 
-      <script>
-        var swiper = new Swiper(".hotel-swiper", {
-          slidesPerView: "auto",
-          spaceBetween: 12,
-        });
-      </script>
-
-
-
+    <script>
+      $('.collapse').on('show.bs.collapse', function () {
+        $('.collapse').not(this).collapse('hide');
+    });
+    </script>
     
   </body>
 </html>
