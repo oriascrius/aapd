@@ -14,6 +14,9 @@
     <!----- Swiper ----->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
   </head>
   <body>
    
@@ -44,22 +47,22 @@
       </div>
     </nav>
 
-    <div class="container mb-2">
-      <div class="row row-cols-3 gx-3">
+    <div class="container my-3">
+      <div class="row row-cols-3 gx-4">
         <div class="col">
-          <button type="button" class="btn btn-outline-primary-500 rounded-4 w-100">
-            <svg class="align-bottom me-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect class="svg-icon" x="3" y="6.5" width="18" height="15" rx="2" stroke="#8A7F68" stroke-width="2"/>
-              <path class="svg-icon" d="M4 11.5H20" stroke="#8A7F68" stroke-width="2" stroke-linecap="round"/>
-              <path class="svg-icon" d="M9 16.5H15" stroke="#8A7F68" stroke-width="2" stroke-linecap="round"/>
-              <path class="svg-icon" d="M8 3.5L8 7.5" stroke="#8A7F68" stroke-width="2" stroke-linecap="round"/>
-              <path class="svg-icon" d="M16 3.5L16 7.5" stroke="#8A7F68" stroke-width="2" stroke-linecap="round"/>
-            </svg>日期
+          <button type="button" class="btn btn-outline-primary-500 rounded-4 w-100" data-bs-toggle="collapse" data-bs-target="#calendarDropdown">
+            <div class="d-flex align-items-center justify-content-center">
+              <img class="calendar-img" src="../assets/images/icon/calendar.svg" alt="calendar">
+              <img class="calendar-img-hover" src="../assets/images/icon/calendar copy.svg" alt="">
+              <p class="ms-3 m-0">日期</p>
+            </div>
           </button>
         </div>
 
+
+
         <div class="col">
-          <button type="button" class="btn btn-outline-primary-500 px-3 rounded-4 w-100">
+          <button type="button" class="btn btn-outline-primary-500 rounded-4 px-2 w-100" data-bs-toggle="collapse" data-bs-target="#people">
             <svg class="align-bottom me-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle class="svg-icon" cx="9.02051" cy="7.5" r="3.1" stroke="#8A7F68" stroke-width="1.8" stroke-linecap="round"/>
               <path class="svg-icon" d="M16.2019 7.45C16.4803 6.96766 16.939 6.61571 17.477 6.47156C18.015 6.32741 18.5882 6.40287 19.0705 6.68135C19.5528 6.95982 19.9048 7.4185 20.049 7.95648C20.1931 8.49446 20.1176 9.06766 19.8392 9.55C19.5607 10.0323 19.102 10.3843 18.564 10.5284C18.0261 10.6726 17.4528 10.5971 16.9705 10.3187C16.4882 10.0402 16.1362 9.5815 15.9921 9.04352C15.8479 8.50554 15.9234 7.93234 16.2019 7.45L16.2019 7.45Z" stroke="#8A7F68" stroke-width="1.8"/>
@@ -68,9 +71,9 @@
             </svg>1人獨旅
           </button>
         </div>
-        
+      
         <div class="col">
-          <button type="button" class="btn btn-outline-primary-500 rounded-4 w-100">
+          <button type="button" class="btn btn-outline-primary-500 rounded-4 w-100" data-bs-toggle="collapse" data-bs-target="#buget">
             <svg class="align-bottom me-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="svg-icon" d="M12 4.5L12 20.5" stroke="#8A7F68" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
               <path class="svg-icon" d="M16.1667 6.5H9.91667C9.14312 6.5 8.40125 6.81607 7.85427 7.37868C7.30729 7.94129 7 8.70435 7 9.5C7 10.2956 7.30729 11.0587 7.85427 11.6213C8.40125 12.1839 9.14312 12.5 9.91667 12.5H14.0833C14.8569 12.5 15.5987 12.8161 16.1457 13.3787C16.6927 13.9413 17 14.7044 17 15.5C17 16.2956 16.6927 17.0587 16.1457 17.6213C15.5987 18.1839 14.8569 18.5 14.0833 18.5H7" stroke="#8A7F68" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -81,54 +84,57 @@
     </div>
 
 
-    <div class="swiper hotel-swiper ps-5 my-3">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#">
-              <div class="text-center py-3">
-                <img class="w-100 mb-3 px-5" src="/assets/images/feature-tab-icon/Feature icon - Discount.svg" alt="Discount-icon">
-  
-                <p class="text-primary-50 fw-bold m-0">獨家折扣</p>
-              </div>
-            </a>
-          </div>
-        </div>
 
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#">
-              <div class="d-flex flex-column align-items-center justify-content-between pt-5">
-                <img class="w-100 mb-4 px-6" src="/assets/images/feature-tab-icon/home 1.png" alt="popular-icon">
-                  
-                <p class="text-white fw-bold m-0 pt-1">熱門住宿</p>
-              </div>
-            </a>
-          </div>
-        </div>
 
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#"> 
-              <div class="text-center pt-3">
-                <img class="w-100 mb-3 px-5" src="/assets/images/feature-tab-icon/Feature icon - Machiya.svg" alt="Machiya-icon">
-  
-                <p class="text-white fw-bold m-0">日式町屋</p>
-              </div>
-            </a>
-          </div>
-        </div>
 
-        <div class="swiper-slide hotel-slide">
-          <div class="hotel-bg-img rounded hotel-slide">
-            <a href="#"> 
-              <div class="text-center pt-3">
-                <img class="w-100 mb-3 px-5" src="/assets/images/feature-tab-icon/Feature icon - Onsen.svg" alt="Onsen-icon">
+    <div id="apple">
+
+      <div class="collapse bg-white rounded-4 py-4 px-3 border border-2" id="calendarDropdown" data-parent="#apple">
+
+        <div id="datepicker"></div>
+        <div class="datepicker-footer">
+          <a href="#" class="fw-medium fs-5">搜尋</a>
+        </div>
+      </div>
   
-                <p class="text-white fw-bold m-0">溫泉旅館</p>
-              </div>
-            </a>
-          </div>
+      <div class="collapse bg-white rounded-4" id="people"  data-parent="#apple">
+
+        <div class="cardTraveling m-0">
+          <ul class="list-unstyled m-0 text-center">
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn" data-value="1 人獨旅">1 人獨旅</li>
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                  data-value="2  -  4">
+                  2 <span class="mx-2"></span> 4
+              </li>
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                  data-value="6  -  8">
+                  6 <span class="mx-2"></span> 8
+              </li>
+              <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn" data-value="10 人團旅">10 人團旅</li>
+              <li class="datepicker-footer"><a href="#" class="fw-medium fs-5">搜尋</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collapse bg-white rounded-4" id="buget" data-parent="#apple">
+
+        <div class="cardTraveling m-0">
+          <ul class="list-unstyled m-0 text-center">
+            <li class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                data-value="$ 2 K - 4 K">
+                $ 2 K <span class="mx-2"></span> $ 4 K
+            </li>
+            <li class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                data-value="$ 5 K - 1 W">
+                $ 5 K <span class="mx-2"></span> $ 1 W
+            </li>
+            <li class="fw-medium fs-5 mb-4 tab-index-btn d-flex align-items-center justify-content-center"
+                data-value="$ 2 W - 4 W">
+                $ 2 W <span class="mx-2"></span> $ 4 W
+            </li>
+            <li class="fw-medium qoq-fs-14 mb-4 tab-index-btn">自定義</li>
+            <li class="datepicker-footer"><a href="#" class="fw-medium fs-5">搜尋</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -140,10 +146,48 @@
 
 
 
-    <div class="container pt-3 pb-4">
+
+
+
+    <div class="swiper hotel-swiper ps-5 my-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="../assets/images/tabimg/Feature tab (3).png" alt="food-img">
+          </a>
+        </div>
+
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="../assets/images/tabimg/Feature tab (2).png" alt="outdoor-img">
+          </a>
+        </div>
+
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="../assets/images/tabimg/Feature tab.png" alt="handmade-img">
+          </a>
+        </div>
+
+        <div class="swiper-slide w-auto">
+          <a class="hotel-bg-img" href="#">
+            <img src="../assets/images/tabimg/Feature tab (1).png" alt="store-img">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container my-4">
       <h2 class="text-primary-700 fw-bold">為您推薦</h2>
 
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper mt-4">
         <div class="swiper-wrapper">
           <div class="swiper-slide position-relative w-286">
             <div class="d-flex justify-content-between align-items-center p-4 w-286 position-absolute z-3">
@@ -155,7 +199,7 @@
             </div>
 
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/assets/images/pic/kyoto12.png" class="card-img-top rounded hotel-img" alt="house"></a>
+              <a href="#"><img src="/assets/images/pic/kyoto12.png" class="card-img-top rounded-4 hotel-img" alt="house"></a>
               
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between mt-4 mb-3">
@@ -185,7 +229,7 @@
             </div>
             
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/assets/images/pic/kyoto11.png" class="card-img-top rounded hotel-img" alt="house"></a>
+              <a href="#"><img src="/assets/images/pic/kyoto11.png" class="card-img-top rounded-4 hotel-img" alt="house"></a>
 
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
@@ -209,10 +253,10 @@
     </div>
 
 
-    <div class="container pt-3 pb-4">
+    <div class="container my-4">
       <h2 class="text-primary-700 fw-bold">精選旅宿</h2>
 
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper mt-4">
         <div class="swiper-wrapper">
           <div class="swiper-slide position-relative w-286">
             <div class="d-flex justify-content-between align-items-center p-4 w-100 position-absolute z-3">
@@ -224,7 +268,7 @@
             </div>
 
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/assets/images/pic/kyoto 20.png" class="w-100 rounded hotel-tour-img" alt="house"></a>
+              <a href="#"><img src="/assets/images/pic/kyoto 20.png" class="w-100 rounded-4 hotel-tour-img" alt="house"></a>
 
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between mt-4 mb-3">
@@ -254,7 +298,7 @@
             </div>
 
             <div class="card border-0 bg-transparent">
-              <a href="#"><img src="/assets/images/pic/kyoto13.png" class="card-img-top rounded tour-img-2" alt="house"></a>
+              <a href="#"><img src="/assets/images/pic/kyoto13.png" class="card-img-top rounded-4 tour-img-2" alt="house"></a>
 
               <div class="card-body px-3 py-0">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
@@ -309,6 +353,29 @@
 
 
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+    <script>
+      $(document).ready(function(){
+        // 初始化日期選擇器
+        $('#datepicker').datepicker({
+          format: 'yyyy-mm-dd',
+          autoclose: true
+        });
+      });
+    </script>
+
+    <script>
+      $('.collapse').on('show.bs.collapse', function () {
+        $('.collapse').not(this).collapse('hide');
+    });
+    </script>
     
   </body>
 </html>

@@ -2,6 +2,8 @@ body {
   background: linear-gradient(#FFFFFF, #E5E3DC, #FFFFFF);
 
   padding-bottom: 25%;
+
+  
 }
 
 a {
@@ -26,8 +28,22 @@ a {
   color: #998F76;
 }
 
+.btn:active {
+  p {
+    color: #FFFFFF;
+  }
+}
+
 .btn:hover {
   color: white;
+
+  .calendar-img {
+    display: none;
+  }
+
+  .calendar-img-hover {
+    display: block;
+  }
 }
 
 .btn:hover .svg-icon {
@@ -38,28 +54,34 @@ a {
   fill: #FFFFFF;
 }
 
-.icon-bg-img {
-  background: linear-gradient(-45deg,#E5E3DC,#B0A994), url(/assets/images/feature-tab-icon/Noise.png);
 
-  background-blend-mode: overlay;
-  
-  
-  transition: background 0.3s ease;
+.tab-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* 半透明黑色遮罩 */
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 16px;
 }
 
-.icon-bg-img:hover {
-  background: linear-gradient(rgba(229, 227, 220, 1),rgb(158, 145, 106)), url(/assets/images/feature-tab-icon/Noise.png);
-
-  background-blend-mode: overlay;
+.tab-img:hover::before {
+  opacity: 1;
 }
 
 
 
+.calendar-img {
+  display: block;
+}
 
 
-.slide-2 {
-  width: 84px;
-  height: 99px;
+
+.calendar-img-hover {
+  display: none;
 }
 
 
@@ -102,4 +124,44 @@ a {
 
 .search-fz-12 {
   font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.datepicker table tr td.active {
+  border-radius: 50%;
+  background-color: #766a58 !important;
+  background-image: none;
+}
+
+
+.datepicker table tr td.active:hover {
+  background-color: #766a58 !important;
+  background-image: none;
+}
+
+
+
+
+
+
+
+
+.datepicker table {
+  margin: 0;
+}
+
+.datepicker td,
+.datepicker th {
+  width: 10rem;
+  
+  height: 2.5rem;
 }
