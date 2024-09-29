@@ -1,0 +1,11 @@
+.accommodation-header {
+  padding: 14px 14px 12px 21px;
+  .accommodation-header-list {
+    li {
+      &:nth-child(1),
+      &:nth-child(2) {
+        padding-right: 5px;
+      }
+    }
+  }
+}

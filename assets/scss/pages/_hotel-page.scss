@@ -1,0 +1,53 @@
+.hotel-img {
+  height: 180px;
+  width: 286px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hotel-bg-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* 半透明黑色遮罩 */
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 16px;
+}
+
+
+.hotel-bg-img:hover::before {
+  opacity: 1;
+}
+
+
+
+
+.hotel-tour-img {
+  height: 180px;
+  width: 286px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+
+
+
+.hotel-slide {
+  width: 84px;
+  height: 99px;
+}
+
+
+.w-286 {
+  width: 286px;
+}
+
+
+.hotel-fz-12 {
+  font-size: 12px;
+}

@@ -1,0 +1,167 @@
+body {
+  background: linear-gradient(#FFFFFF, #E5E3DC, #FFFFFF);
+
+  padding-bottom: 25%;
+
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+.header-explor {
+  letter-spacing: 0.5rem;
+}
+
+.form-control::placeholder {
+  color: #998F76;
+}
+
+.btn:active {
+  p {
+    color: #FFFFFF;
+  }
+}
+
+.btn:hover {
+  color: white;
+
+  .calendar-img {
+    display: none;
+  }
+
+  .calendar-img-hover {
+    display: block;
+  }
+}
+
+.btn:hover .svg-icon {
+  stroke :#FFFFFF;
+}
+
+.btn:hover .svg-icon-fill {
+  fill: #FFFFFF;
+}
+
+
+.tab-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* 半透明黑色遮罩 */
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 16px;
+}
+
+.tab-img:hover::before {
+  opacity: 1;
+}
+
+
+
+.calendar-img {
+  display: block;
+}
+
+
+
+.calendar-img-hover {
+  display: none;
+}
+
+
+
+
+
+
+
+.bookmark-fill:hover {
+  fill: #FFFFFF;
+}
+
+
+.text-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-rate {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.tour-img {
+  height: 180px;
+  width: 286px;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.tour-img-2 {
+  height: 180px;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+
+.search-fz-12 {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.datepicker table tr td.active {
+  border-radius: 50%;
+  background-color: #766a58 !important;
+  background-image: none;
+}
+
+
+.datepicker table tr td.active:hover {
+  background-color: #766a58 !important;
+  background-image: none;
+}
+
+
+
+
+
+
+
+
+.datepicker table {
+  margin: 0;
+}
+
+.datepicker td,
+.datepicker th {
+  width: 10rem;
+  
+  height: 2.5rem;
+}
