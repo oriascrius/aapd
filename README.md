@@ -37,52 +37,42 @@
 
 ---
 
-##  網站導覽
+## 網站導覽
+
 ### 首頁
 <p>
-
-![首頁](./assets/images/README-imgs/aapd_pages_index.html.png)
-![首頁](./assets/images/README-imgs/aapd_pages_index_1.html.png)
-![首頁](./assets/images/README-imgs/aapd_pages_index_2.html.png)
-![首頁](./assets/images/README-imgs/aapd_pages_index_3.html.png)
-
+    <img src="./assets/images/README-imgs/aapd_pages_index.html.png" alt="首頁" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_index_1.html.png" alt="首頁" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_index_2.html.png" alt="首頁" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_index_3.html.png" alt="首頁" style="width:375px; height:812px;">
 </p>
 
 ### 導覽五區塊
-#### 導覽五區塊 - 探索
-![探索](./assets/images/README-imgs/aapd_pages_search-page.html.png)
-#### 導覽五區塊 - 旅宿
-![旅宿](./assets/images/README-imgs/aapd_pages_hotel-page.html.png)
-#### 導覽五區塊 - 旅遊行程
-![旅遊行程](./assets/images/README-imgs/aapd_pages_mytrip.html.png)
-#### 導覽五區塊 - 社群
-![社群](./assets/images/README-imgs/aapd_pages_social-page.html.png)
-#### 導覽五區塊 - 個人
-![個人](./assets/images/README-imgs/aapd_pages_personal-page.html.png)
+<p>
+    <img src="./assets/images/README-imgs/aapd_pages_search-page.html.png" alt="探索" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_hotel-page.html.png" alt="旅宿" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_mytrip.html.png" alt="旅遊行程" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_social-page.html.png" alt="社群" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_personal-page.html.png" alt="個人" style="width:375px; height:812px;">
+</p>
 
 ### 探索細項
 <p>
-
-![探索細項](./assets/images/README-imgs/aapd_pages_explore.html.png)
-![探索細項](./assets/images/README-imgs/aapd_pages_explore.html%20(1).png)
-![探索細項](./assets/images/README-imgs/aapd_pages_explore-detail.html.png)
-
+    <img src="./assets/images/README-imgs/aapd_pages_explore.html.png" alt="探索細項" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_explore.html%20(1).png" alt="探索細項" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_explore-detail.html.png" alt="探索細項" style="width:375px; height:812px;">
 </p>
 
 ### 旅宿細項
 <p>
-
-![旅宿細項](./assets/images/README-imgs/aapd_pages_accommodation.html.png)
-![地圖模式](./assets/images/README-imgs/aapd_pages_map-mode.html%20(1).png)
-![旅宿資訊](./assets/images/README-imgs/aapd_pages_accommodation-detail.html.png)
-![選擇房型](./assets/images/README-imgs/aapd_pages_select_product.html.png)
-![訂購旅宿付款](./assets/images/README-imgs/aapd_pages_order_goods.html.png)
-![確認訂購資訊](./assets/images/README-imgs/aapd_pages_product_order.html.png)
-![完成訂購](./assets/images/README-imgs/aapd_pages_order_completed.html.png)
-
+    <img src="./assets/images/README-imgs/aapd_pages_accommodation.html.png" alt="旅宿細項" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_map-mode.html%20(1).png" alt="地圖模式" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_accommodation-detail.html.png" alt="旅宿資訊" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_select_product.html.png" alt="選擇房型" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_order_goods.html.png" alt="訂購旅宿付款" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_product_order.html.png" alt="確認訂購資訊" style="width:375px; height:812px; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_order_completed.html.png" alt="完成訂購" style="width:375px; height:812px;">
 </p>
-
-
 
 
 ---
