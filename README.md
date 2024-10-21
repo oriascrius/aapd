@@ -41,36 +41,36 @@
 
 ### 首頁
 <p>
-    <img src="./assets/images/README-imgs/aapd_pages_index.png" alt="首頁" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_index_1.png" alt="首頁1" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_index_2.png" alt="首頁2" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_index_3.png" alt="首頁3" style="width:375px; height:811px; object-fit:cover;">
+    <img src="./assets/images/README-imgs/aapd_pages_index.png" alt="首頁" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_index_1.png" alt="首頁1" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_index_2.png" alt="首頁2" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_index_3.png" alt="首頁3" style="width:375px; height:811px; object-fit:cover; margin-bottom:10px;">
 </p>
 
 ### 導覽五區塊 
 <p>
-    <img src="./assets/images/README-imgs/aapd_pages_search-page.png" alt="探索" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_hotel-page.png" alt="旅宿" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_mytrip.png" alt="旅遊行程" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_social-page.png" alt="社群" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_search-page.png" alt="探索" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_hotel-page.png" alt="旅宿" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_mytrip.png" alt="旅遊行程" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_social-page.png" alt="社群" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
     <img src="./assets/images/README-imgs/aapd_pages_personal-page.png" alt="個人" style="width:375px; height:811px; object-fit:cover;">
 </p>
 
 ### 探索細項
 <p>
-    <img src="./assets/images/README-imgs/aapd_pages_explore.png" alt="探索細項" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgsaapd_pages_explore(1).png" alt="探索細項" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_explore.png" alt="探索細項" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_explore(1).png" alt="探索細項" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
     <img src="./assets/images/README-imgs/aapd_pages_explore-detail.png" alt="探索細項" style="width:375px; height:811px; object-fit:cover;">
 </p>
 
 ### 旅宿細項
 <p>
-    <img src="./assets/images/README-imgs/aapd_pages_accommodation.png" alt="旅宿細項" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_map-mode.png" alt="地圖模式" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_accommodation-detail.png" alt="旅宿資訊" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_select_product.png" alt="選擇房型" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_order_goods.png" alt="訂購旅宿付款" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
-    <img src="./assets/images/README-imgs/aapd_pages_product_order.png" alt="確認訂購資訊" style="width:375px; height:811px; object-fit:cover; margin-right:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_accommodation.png" alt="旅宿細項" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_map-mode.png" alt="地圖模式" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_accommodation-detail.png" alt="旅宿資訊" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_select_product.png" alt="選擇房型" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_order_goods.png" alt="訂購旅宿付款" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
+    <img src="./assets/images/README-imgs/aapd_pages_product_order.png" alt="確認訂購資訊" style="width:375px; height:811px; object-fit:cover; margin-right:10px; margin-bottom:10px;">
     <img src="./assets/images/README-imgs/aapd_pages_order_completed.png" alt="完成訂購" style="width:375px; height:811px; object-fit:cover;">
 </p>
 
